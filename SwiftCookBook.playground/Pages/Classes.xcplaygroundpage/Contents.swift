@@ -62,7 +62,7 @@ number.getNumber()
 struct Employee {
     var firstName: String
     var secondName: String
-    
+
     var salary: Int
 
     func getFullNameAndSalary() -> String {
@@ -74,6 +74,41 @@ var names: [String] = ["Ivan", "Petya", "Gleb", "Sasha", "Victor"]
 var surNames: [String] = ["Vodkin", "Sagan", "Gray", "Tronak", "Bashik"]
 
 var randomSeed: Int = RandomNumberGenerator(min: 0, max: names.count - 1).getNumber()
-var randomEmployer: Employee = Employee(firstName: names[randomSeed], secondName: surNames[randomSeed], salary: RandomNumberGenerator(min: 10_000, max: 100_000).getNumber())
+var randomEmployer: Employee = .init(firstName: names[randomSeed], secondName: surNames[randomSeed], salary: RandomNumberGenerator(min: 10_000, max: 100_000).getNumber())
 
 print(randomEmployer.getFullNameAndSalary())
+
+// 1
+// суперкласс
+class Quadruped {
+    var type: String
+    var name: String
+
+    init(type: String, name: String) {
+        self.type = type
+        self.name = name
+    }
+
+    func walk() {
+        print("walk")
+    }
+}
+
+class Dog: Quadruped {
+    init(name: String) {
+        super.init(type: "dog", name: name)
+    }
+
+    func bark() {
+        print("woof")
+    }
+
+    func printName() {
+        print(name)
+    }
+}
+
+var dog = Dog(name: "Bosa")
+dog.walk() // выводит walk
+dog.bark() // выводит woof
+dog.type
