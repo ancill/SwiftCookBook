@@ -62,6 +62,88 @@ struct Chessman {
 
 // 5
 var whiteKing = Chessman(color: .white, type: .king)
-whiteKing.setCoordinates(char: "C", num: 3)
-whiteKing.kill()
+
 var blackKing = Chessman(color: .black, type: .king, coordinates: ("A", 2), symbol: "\u{265A}")
+
+whiteKing.setCoordinates(char: "C", num: 3)
+
+
+struct Person {
+    var name: String
+    var surName: String
+    
+    init(name: String) {
+        self.name = name
+        self.surName = ""
+    }
+    
+    init(name: String, surName: String) {
+        self.name = name
+        self.surName = surName
+    }
+    
+    func getName() -> String {
+        return "Ваше имя - \(name) \(surName)"
+    }
+    
+    mutating func setName(name: String, surName: String) {
+        self.name = name
+        self.surName = surName
+    }
+}
+
+var ivan = Person(name: "Ivan")
+ivan.getName()
+
+ivan.setName(name: "Vanya", surName: "Arsenev")
+
+ivan.getName()
+
+print(ivan.getName())
+
+struct City {
+    var population: Int
+    var description: String {
+        if self.population < 100_000 {
+            return "Это небольшой город"
+        } else if self.population < 1_000_000 {
+            return "Это город среднего размера"
+        } else {
+            return "Это большой город"
+        }
+    }
+}
+
+let moscow = City(population: 17_000_000)
+let spb = City(population: 3_000_000)
+spb.description
+
+
+struct NewsStory {
+  static var breakingNewsCount = 0
+  static var regularNewsCount = 0
+  var headline: String
+  init(headline: String, isBreaking: Bool) {
+    self.headline = headline
+    if isBreaking {
+      NewsStory.breakingNewsCount += 1
+    } else {
+      NewsStory.regularNewsCount += 1
+    }
+  }
+}
+
+struct Wine {
+  var age: Int
+  var isVintage: Bool
+  var price: Int {
+    if isVintage {
+      return age + 20
+    } else {
+      return age + 5
+    }
+  }
+}
+
+let malbec = Wine(age: 2, isVintage: true)
+print(malbec.price)
