@@ -147,3 +147,30 @@ struct Wine {
 
 let malbec = Wine(age: 2, isVintage: true)
 print(malbec.price)
+
+
+//13
+protocol GeometricFigureWithXAxis {
+    var x: Int { get set }
+}
+
+protocol GeometricFigureWithYAxis {
+    var y: Int { get set }
+}
+
+protocol GeometricFigureTwoAxis: GeometricFigureWithXAxis, GeometricFigureWithYAxis {
+    var distanceFromCenter: Float { get }
+}
+
+struct Figure2D: GeometricFigureTwoAxis {
+    var x: Int = 0
+    var y: Int = 0
+    var distanceFromCenter: Float {
+        let xPow = pow(2, Double(self.x))
+        let yPow = pow(2, Double(self.y))
+        let length = sqrt(xPow + yPow)
+        return Float(length)
+    }
+}
+
+Figure2D(x: 10, y: 5).distanceFromCenter // 32
