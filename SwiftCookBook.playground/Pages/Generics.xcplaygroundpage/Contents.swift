@@ -32,11 +32,22 @@ func search<T: Comparable>(value: T, in collection: [T]) -> Bool {
     return false
 }
 
+func search2<T1, T2>(value: T1, in collection: T2) -> Bool
+    where T1: Comparable, T2: Collection, T1 == T2.Element
+{
+    for item in collection {
+        if item == value {
+            return true
+        }
+    }
+    return false
+}
+
 var array = [1, 7, 9, 11]
 search(value: 1, in: array) // true
 search(value: 5, in: array) // false
 
-struct Stack<T> {
+struct Stack1<T> {
     var items = [T]()
     mutating func push(_ item: T) {
         items.insert(contentsOf: [item], at: 0)
@@ -47,13 +58,42 @@ struct Stack<T> {
     }
 }
 
-extension Stack {
+extension Stack1 {
     mutating func replaceFirst(_ newValue: T) {
         items[0] = newValue
     }
 }
 
-
-var genericIntStorage = Stack(items: [1,2,3,4,5])
+var genericIntStorage = Stack1(items: [1, 2, 3, 4, 5])
 genericIntStorage.replaceFirst(10)
 genericIntStorage.items // [10, 2, 3, 4, 5]
+
+// -------------------------------------------
+// Таким образом, ItemType (аналогично Element в протоколе Collection) — это некий заполнитель, который используется, чтобы описать требования в теле протокола.
+protocol StackProtocol {
+    associatedtype ItemType
+    var items: [ItemType] { get set }
+    mutating func push(_ item: ItemType)
+    mutating func pop() -> ItemType
+}
+
+extension StackProtocol {
+    mutating func push(_ item: ItemType) {
+        items.insert(contentsOf: [item], at: 0)
+    }
+
+    mutating func pop() -> ItemType {
+        return items.removeFirst()
+    }
+}
+
+struct Stack<T>: StackProtocol {
+    typealias ItemType = T
+    var items: [T]
+}
+
+// Проверка работы
+var myStack = Stack(items: [2, 4, 6, 8])
+myStack.pop() // 2
+myStack.push(9)
+myStack.items // [9, 4, 6, 8]
