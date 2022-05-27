@@ -6,5 +6,6 @@
         <page name='Enums'/>
         <page name='Protocols'/>
         <page name='Generics'/>
+        <page name='ErrorHandling'/>
     </pages>
 </playground>

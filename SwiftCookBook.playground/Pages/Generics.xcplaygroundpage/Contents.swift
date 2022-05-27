@@ -97,3 +97,39 @@ var myStack = Stack(items: [2, 4, 6, 8])
 myStack.pop() // 2
 myStack.push(9)
 myStack.items // [9, 4, 6, 8]
+
+/*:
+ Непрозрачные типы (Opaque types)
+ 
+ Можно сказать, что непрозрачные типы — это обратные универсальные шаблоны. При использовании дженериков конкретный тип возвращаемого зна- чения определяет тот, кто вызывает функцию, а при использовании Opaque types конкретный тип определяется реализацией функции (в ее теле) 
+ 
+ Opaque types позволяют указывать тип возвращаемого функцией значения с помощью протокола, использующего связанные типы (или ключевое слово Self) в своей реализации.
+ Opaque types позволяют определять тип возвращаемого значения внутри самой функции.
+ */
+protocol Vehicle {
+    associatedtype Identifier
+    var uid: Identifier { get set }
+}
+
+struct Car: Vehicle {
+    var uid: Int
+}
+
+//
+// Generic
+//
+func getCar<T: Vehicle>() -> T{
+    return Car(uid: 22) as! T
+}
+// Тип возвращаемого значения определяется тут
+let a: Car = getCar()
+
+//
+// Opaque type
+//
+func getCar() -> some Vehicle {
+    // Тип возвращаемого значения определяется тут
+    return Car(uid: 54)
+}
+let b = getCar() // Car
+
