@@ -5,7 +5,7 @@ protocol BallProtocol {
 }
 
 public class Ball: UIView, BallProtocol {
-    public required init(color: UIColor, radius: Int, coordinates: (x: Int, y: Int)) {
+    required public init(color: UIColor, radius: Int, coordinates: (x: Int, y: Int)) {
         // создание графического прямоугольника
         super.init(frame:
             CGRect(x: coordinates.x,
@@ -22,3 +22,4 @@ public class Ball: UIView, BallProtocol {
         fatalError("init(coder:) has not been implemented")
     }
 }
+		

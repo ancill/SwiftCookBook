@@ -5,6 +5,6 @@
         <page name='Classes'/>
         <page name='Enums'/>
         <page name='Protocols'/>
-        <page name='Balls'/>
+        <page name='Generics'/>
     </pages>
 </playground>

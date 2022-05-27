@@ -15,7 +15,7 @@ public class SquareArea: UIView, SquareAreaProtocol {
     private var snapBehavior: UISnapBehavior?
     // обработчик столкновений
     private var collisionBehavior: UICollisionBehavior
-    
+
     public required init(size: CGSize, color: UIColor) {
         // создание обработчика столкновений
         collisionBehavior = UICollisionBehavior(items: [])
@@ -34,12 +34,11 @@ public class SquareArea: UIView, SquareAreaProtocol {
         // подключаем к аниматору обработчик столкновений
         animator?.addBehavior(collisionBehavior)
     }
-    
-    @available(*, unavailable)
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     public func setBalls(withColors ballsColor: [UIColor], andRadius radius: Int) {
         // перебираем переданные цвета
         // один цвет — один шарик
@@ -58,6 +57,28 @@ public class SquareArea: UIView, SquareAreaProtocol {
             balls.append(ball)
             // добавляем шарик в обработчик столкновений
             collisionBehavior.addItem(ball)
+        }
+    }
+
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let touchLocation = touch.location(in: self)
+            for ball in balls {
+                if ball.frame.contains(touchLocation) {
+                    snapBehavior = UISnapBehavior(item: ball, snapTo: touchLocation)
+                    snapBehavior?.damping = 0.5
+                    animator?.addBehavior(snapBehavior!)
+                }
+            }
+        }
+    }
+
+    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let touchLocation = touch.location(in: self)
+            if let snapBehavior = snapBehavior {
+                snapBehavior.snapPoint = touchLocation
+            }
         }
     }
 }
