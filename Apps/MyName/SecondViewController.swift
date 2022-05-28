@@ -8,6 +8,8 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    @IBOutlet var myLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,6 +55,11 @@ class SecondViewController: UIViewController {
         alertController.addAction(actionOK)
         alertController.addAction(actionCancel)
         self.present(alertController, animated: true, completion: nil)
-        
+    }
+    
+    @IBAction func changeLabelText(_ sender: UIButton) {
+        if let buttonText = sender.titleLabel!.text {
+            self.myLabel.text = "\(buttonText) захотел!"
+        }
     }
 }
