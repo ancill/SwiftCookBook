@@ -7,5 +7,6 @@
         <page name='Protocols'/>
         <page name='Generics'/>
         <page name='ErrorHandling'/>
+        <page name='Patterns'/>
     </pages>
 </playground>
