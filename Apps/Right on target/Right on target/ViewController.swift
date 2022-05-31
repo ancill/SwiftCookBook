@@ -8,12 +8,47 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var slider: UISlider!
+    @IBOutlet var label: UILabel!
+    var number: Int = 0
+    var round: Int = 0
+    var points: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func checkNumber() {
+        if self.round == 0 {
+            self.number = Int.random(in: 1 ... 50)
+            self.label.text = String(self.number)
+            self.round = 1
+        } else {
+            // получаем значение на слайдере
+            let numSlider = Int(slider.value.rounded())
+            print(numSlider)
 
+            if numSlider > self.number {
+                self.points += 50 - numSlider + self.number
+            }
+            if numSlider < self.number {
+                self.points += 50 - numSlider + self.number
+            } else {
+                self.points += 50
+            }
+            print("Очки - \(self.points)")
+            if self.round == 5 {
+                let alert = UIAlertController(title: "Game over", message: "Вы заработали \(self.points) очков", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Начать заново", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                self.round = 1
+                self.points = 0
+            } else {
+                self.round += 1
+            }
+            self.number = Int.random(in: 1 ... 50)
+            self.label.text = String(self.number)
+        }
+    }
 }
-
