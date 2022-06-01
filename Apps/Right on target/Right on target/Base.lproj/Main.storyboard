@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="1" maxValue="50" minimumValueImage="square.fill" catalog="system" maximumValueImage="50.square.fill" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-T7-EFl">
-                                <rect key="frame" x="62" y="192" width="772" height="31"/>
-                                <color key="tintColor" systemColor="systemPurpleColor"/>
-                                <color key="minimumTrackTintColor" systemColor="systemPinkColor"/>
-                                <color key="thumbTintColor" systemColor="systemPinkColor"/>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yo8-va-0y5">
                                 <rect key="frame" x="443" y="320" width="10.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -39,40 +33,79 @@
                                     <action selector="checkNumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="URT-UR-c4w"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="p8o-2l-N6p">
+                                <rect key="frame" x="62" y="192" width="772" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EA5-bA-5uf">
+                                <rect key="frame" x="761" y="362" width="115" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="О программе"/>
+                                <connections>
+                                    <segue destination="rOv-KR-gSl" kind="show" id="HKF-SF-G0t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="phQ-7s-Jy9" firstAttribute="top" secondItem="ncc-T7-EFl" secondAttribute="bottom" constant="30" id="1Y2-qf-S60"/>
-                            <constraint firstItem="ncc-T7-EFl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7uk-WA-mL9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p8o-2l-N6p" secondAttribute="trailing" constant="20" id="77v-tG-4XC"/>
+                            <constraint firstItem="phQ-7s-Jy9" firstAttribute="top" secondItem="p8o-2l-N6p" secondAttribute="bottom" constant="30" id="E9k-yP-W93"/>
+                            <constraint firstItem="yo8-va-0y5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UAr-18-Ktk"/>
                             <constraint firstItem="yo8-va-0y5" firstAttribute="top" secondItem="phQ-7s-Jy9" secondAttribute="bottom" constant="30" id="WDH-k4-zP1"/>
+                            <constraint firstItem="EA5-bA-5uf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="c7F-N9-hS5"/>
+                            <constraint firstAttribute="trailing" secondItem="EA5-bA-5uf" secondAttribute="trailing" constant="20" id="cYl-rN-wzo"/>
                             <constraint firstItem="phQ-7s-Jy9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ftQ-VX-6KS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ncc-T7-EFl" secondAttribute="trailing" constant="20" id="mam-is-Fd7"/>
-                            <constraint firstItem="yo8-va-0y5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="muc-j4-auU"/>
-                            <constraint firstItem="ncc-T7-EFl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yGZ-Hz-or6"/>
+                            <constraint firstItem="p8o-2l-N6p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hCE-o0-Zgo"/>
+                            <constraint firstItem="p8o-2l-N6p" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kIU-S0-yHu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="H6G-rO-H9F"/>
                     <connections>
                         <outlet property="label" destination="yo8-va-0y5" id="jVt-Ql-wBV"/>
-                        <outlet property="slider" destination="ncc-T7-EFl" id="l1W-He-icH"/>
+                        <outlet property="slider" destination="p8o-2l-N6p" id="LLx-Aj-RN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-16" y="100"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="j6Q-wG-6oK">
+            <objects>
+                <viewController id="rOv-KR-gSl" customClass="SecondViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qad-yK-OOi">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSN-dq-ZyU">
+                                <rect key="frame" x="415.5" y="191.5" width="65.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Назад"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="kIa-mT-wjt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="97G-3D-ZSG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sSN-dq-ZyU" firstAttribute="centerX" secondItem="qad-yK-OOi" secondAttribute="centerX" id="Om8-uX-A9b"/>
+                            <constraint firstItem="sSN-dq-ZyU" firstAttribute="centerY" secondItem="qad-yK-OOi" secondAttribute="centerY" id="c6W-dv-Poz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fzX-9U-6wS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tiE-dP-w4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25.446428571428569" y="-659.4202898550725"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="50.square.fill" catalog="system" width="128" height="114"/>
-        <image name="square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
