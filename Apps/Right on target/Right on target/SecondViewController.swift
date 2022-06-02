@@ -17,7 +17,8 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         print("viewDidLoad SecondViewController")
     }
-
+    // ленивое хранимое свойство типа SecondViewController, в который будет помещаться экземпляр второй сцены
+    // В этом случае вторая сцена загрузится лишь однажды, а при переходе к ней будут вызываться только методы viewWillAppear и viewDidAppear.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear SecondViewController")
@@ -36,5 +37,9 @@ class SecondViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print("viewDidDisappear SecondViewController")
+    }
+
+    @IBAction func hideCurrentScene() {
+        self.dismiss(animated: true, completion: nil)
     }
 }

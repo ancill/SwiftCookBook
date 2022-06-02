@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zAA-KO-gkK">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -41,7 +41,15 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="О программе"/>
                                 <connections>
-                                    <segue destination="rOv-KR-gSl" kind="show" id="HKF-SF-G0t"/>
+                                    <action selector="showNextScreen" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tzg-mW-hsg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFh-Vn-yda">
+                                <rect key="frame" x="537" y="44" width="299" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="О программе через Navigation Controller"/>
+                                <connections>
+                                    <segue destination="cjm-eb-40z" kind="show" id="J1W-9e-kS7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,6 +57,8 @@
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p8o-2l-N6p" secondAttribute="trailing" constant="20" id="77v-tG-4XC"/>
+                            <constraint firstItem="IFh-Vn-yda" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AF6-r6-DsV"/>
+                            <constraint firstAttribute="trailing" secondItem="IFh-Vn-yda" secondAttribute="trailing" constant="60" id="BnH-Ap-LgZ"/>
                             <constraint firstItem="phQ-7s-Jy9" firstAttribute="top" secondItem="p8o-2l-N6p" secondAttribute="bottom" constant="30" id="E9k-yP-W93"/>
                             <constraint firstItem="yo8-va-0y5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UAr-18-Ktk"/>
                             <constraint firstItem="yo8-va-0y5" firstAttribute="top" secondItem="phQ-7s-Jy9" secondAttribute="bottom" constant="30" id="WDH-k4-zP1"/>
@@ -67,12 +77,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16" y="100"/>
+            <point key="canvasLocation" x="727.23214285714278" y="100.00000000000001"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="j6Q-wG-6oK">
             <objects>
-                <viewController id="rOv-KR-gSl" customClass="SecondViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="rOv-KR-gSl" customClass="SecondViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qad-yK-OOi">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +92,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Назад"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="kIa-mT-wjt"/>
+                                    <action selector="hideCurrentScene" destination="rOv-KR-gSl" eventType="touchUpInside" id="Cte-qq-v6k"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -97,7 +107,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiE-dP-w4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25.446428571428569" y="-659.4202898550725"/>
+            <point key="canvasLocation" x="717.85714285714278" y="-659.4202898550725"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="8Cq-8s-BVe">
+            <objects>
+                <viewController id="cjm-eb-40z" customClass="ThirdViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nl6-kL-aA4">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О как ты сюда попал?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caF-Il-ar2">
+                                <rect key="frame" x="102" y="167.5" width="692.5" height="79"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="66"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="035-cu-lLq"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="caF-Il-ar2" firstAttribute="centerY" secondItem="Nl6-kL-aA4" secondAttribute="centerY" id="Fgv-1l-Ei7"/>
+                            <constraint firstItem="caF-Il-ar2" firstAttribute="centerX" secondItem="Nl6-kL-aA4" secondAttribute="centerX" id="Uwj-Su-UaT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7wy-we-N9L"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D2H-cq-rc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536.8303571428571" y="-659.4202898550725"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x6f-ey-OcA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zAA-KO-gkK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TFi-oY-gRs">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VJd-k9-oRs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zdI-Yc-0H9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16.071428571428569" y="100.00000000000001"/>
         </scene>
     </scenes>
     <resources>
@@ -106,6 +163,12 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     var number: Int = 0
     var round: Int = 1
     var points: Int = 0
+    // ленивое свойство для хранения View Controller
+    lazy var secondViewController: SecondViewController = getSecondViewController()
 
     //  Метод loadView выполняется первым в жизненном цикле. Как и viewDidLoad, он вызывается лишь один раз за все время жизни сцены.
     override func loadView() {
@@ -54,6 +56,20 @@ class ViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print("viewDidDisappear")
+    }
+    
+    // приватный метод, загружающий View Controller
+    private func getSecondViewController() -> SecondViewController {
+        // Загрузка storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // Загрузка View Controller и его сцены со Storyboard
+        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
+        return viewController as! SecondViewController
+    }
+
+    @IBAction func showNextScreen() {
+        // Отображение сцены на экране
+        self.present(self.secondViewController, animated: true, completion: nil)
     }
 
     @IBAction func checkNumber() {
