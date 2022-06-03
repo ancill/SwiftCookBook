@@ -1,10 +1,3 @@
-//
-//  ThirdViewController.swift
-//  Right on target
-//
-//  Created by 19072382 on 02.06.2022.
-//
-
 import UIKit
 
 class ThirdViewController: UIViewController {

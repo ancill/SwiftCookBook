@@ -1,18 +1,14 @@
-//
-//  SecondViewController.swift
-//  Right on target
-//
-//  Created by 19072382 on 01.06.2022.
-//
-
 import UIKit
 
 class SecondViewController: UIViewController {
+    //  Метод loadView выполняется первым в жизненном цикле. Как и viewDidLoad, он вызывается лишь один раз за все время жизни сцены.
     override func loadView() {
         super.loadView()
         print("loadView SecondViewController")
     }
-
+    /*:
+     Метод viewDidAppear вызывается после того, как графические элементы сцены добавлены в иерархию view. В данном методе вы можете произвести действия, которые должны быть выполнены уже после отображения элементов на экране (например, запустить анимацию на сцене или синхронизировать дан- ные с сервером).
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad SecondViewController")
@@ -24,11 +20,16 @@ class SecondViewController: UIViewController {
         print("viewWillAppear SecondViewController")
     }
 
+    /*:
+     Метод viewDidAppear вызывается после того, как графические элементы сцены добавлены в иерархию view. В данном методе вы можете произвести действия, которые должны быть выполнены уже после отображения элементов на экране (например, запустить анимацию на сцене или синхронизировать дан- ные с сервером).
+     */
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("viewDidAppear SecondViewController")
     }
 
+    // Методы viewWillDisappear и viewDidDisappear похожи на viewWillAppear и viewDidAppear c той лишь разницей,
+    // что они вызываются до и после удаления элементов сцены из иерархии view.
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("viewWillDisappear SecondViewController")

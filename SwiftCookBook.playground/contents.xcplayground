@@ -8,5 +8,6 @@
         <page name='Generics'/>
         <page name='ErrorHandling'/>
         <page name='Patterns'/>
+        <page name='Operators'/>
     </pages>
 </playground>

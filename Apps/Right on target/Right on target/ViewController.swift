@@ -1,22 +1,29 @@
-//
-//  ViewController.swift
-//  Right on target
-//
-//  Created by 19072382 on 30.05.2022.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
+    var game: Game!
+    
     @IBOutlet var slider: UISlider!
     @IBOutlet var label: UILabel!
-    var number: Int = 0
-    var round: Int = 1
-    var points: Int = 0
+    
+    // MARK: - Работа с переходом к SecondViewController
     // ленивое свойство для хранения View Controller
     lazy var secondViewController: SecondViewController = getSecondViewController()
 
-    //  Метод loadView выполняется первым в жизненном цикле. Как и viewDidLoad, он вызывается лишь один раз за все время жизни сцены.
+    // приватный метод, загружающий View Controller
+    private func getSecondViewController() -> SecondViewController {
+        // Загрузка storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // Загрузка View Controller и его сцены со Storyboard
+        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
+        return viewController as! SecondViewController
+    }
+    
+    @IBAction func showNextScreen() {
+        // Отображение сцены на экране
+        self.present(self.secondViewController, animated: true, completion: nil)
+    }
+    // MARK: - Жизненный цикл по загрузки экрана
     override func loadView() {
         super.loadView()
         // Создаем метку для вывода номера версии
@@ -28,77 +35,40 @@ class ViewController: UIViewController {
         print("loadView")
     }
 
-    //  метод viewDidLoad() вызывается только один раз за всю жизнь сцены. После loadView когда тот загрузил сцену
+    // MARK: - Жизненный цикл после загрузки экрана
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad")
-        // генерируем случайное число
-        self.number = Int.random(in: 1 ... 50)
-        // устанавливаем загаданное число в метку
-        self.label.text = String(self.number)
+        // Create instance of Game
+        game = Game(startValue: 1, endValue: 50, rounds: 5)
+        // Recalculate value of Label with Secret random value
+        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
     }
-
-    /*:
-     Метод viewDidAppear вызывается после того, как графические элементы сцены добавлены в иерархию view. В данном методе вы можете произвести действия, которые должны быть выполнены уже после отображения элементов на экране (например, запустить анимацию на сцене или синхронизировать дан- ные с сервером).
-     */
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("viewDidApear")
+    // MARK: - Взаимодействие View - Model
+    
+    // Check value that player choose
+    @IBAction func checkNumber() {
+        // calculate score by round
+        game.calculateScore(with: Int(slider.value))
+        
+        // Check if game is ended
+        if game.isGameEnded {
+          //  showAlertWIth(score: game.score)
+            // start game again
+            game.restartGame()
+        } else {
+            game.startNewRound()
+        }
+        // update new values from secret number generator
+        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
+        
     }
-
-    // Методы viewWillDisappear и viewDidDisappear похожи на viewWillAppear и viewDidAppear c той лишь разницей,
-    // что они вызываются до и после удаления элементов сцены из иерархии view.
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("viewWillDisappear")
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("viewDidDisappear")
+   
+    // MARK: - Обновление View
+    // Обновление текста загаданного числа
+    private func updateLabelWithSecretNumber(newText: String ) {
+        label.text = newText
     }
     
-    // приватный метод, загружающий View Controller
-    private func getSecondViewController() -> SecondViewController {
-        // Загрузка storyboard
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        // Загрузка View Controller и его сцены со Storyboard
-        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
-        return viewController as! SecondViewController
-    }
-
-    @IBAction func showNextScreen() {
-        // Отображение сцены на экране
-        self.present(self.secondViewController, animated: true, completion: nil)
-    }
-
-    @IBAction func checkNumber() {
-        // получаем значение на слайдере
-        let numSlider = Int(slider.value.rounded())
-        print(numSlider)
-
-        if numSlider > self.number {
-            self.points += 50 - numSlider + self.number
-        }
-        if numSlider < self.number {
-            self.points += 50 - numSlider + self.number
-        } else {
-            self.points += 50
-        }
-
-        print("Очки - \(self.points)")
-
-        if self.round == 5 {
-            let alert = UIAlertController(title: "Game over", message: "Вы заработали \(self.points) очков", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Начать заново", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            self.round = 1
-            self.points = 0
-        } else {
-            self.round += 1
-        }
-
-        self.number = Int.random(in: 1 ... 50)
-        self.label.text = String(self.number)
-    }
+    
+    
 }
