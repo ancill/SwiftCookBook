@@ -16,6 +16,7 @@
 		5C7492992848041E004AF028 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7492982848041E004AF028 /* SecondViewController.swift */; };
 		5C8C0D542849077800E81E69 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C0D532849077800E81E69 /* ThirdViewController.swift */; };
 		5C8C0D57284A0C6B00E81E69 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C0D56284A0C6B00E81E69 /* Game.swift */; };
+		5C9353A4284C9D120066CF36 /* GameRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9353A3284C9D120066CF36 /* GameRoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5C7492982848041E004AF028 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		5C8C0D532849077800E81E69 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		5C8C0D56284A0C6B00E81E69 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		5C9353A3284C9D120066CF36 /* GameRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				5C8C0D56284A0C6B00E81E69 /* Game.swift */,
+				5C9353A3284C9D120066CF36 /* GameRoundViewController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				5C7492992848041E004AF028 /* SecondViewController.swift in Sources */,
 				5C8C0D57284A0C6B00E81E69 /* Game.swift in Sources */,
 				5C02096F2844C66500424792 /* ViewController.swift in Sources */,
+				5C9353A4284C9D120066CF36 /* GameRoundViewController.swift in Sources */,
 				5C8C0D542849077800E81E69 /* ThirdViewController.swift in Sources */,
 				5C02096B2844C66500424792 /* AppDelegate.swift in Sources */,
 				5C02096D2844C66500424792 /* SceneDelegate.swift in Sources */,
@@ -321,7 +325,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ancill.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -351,7 +355,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ancill.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

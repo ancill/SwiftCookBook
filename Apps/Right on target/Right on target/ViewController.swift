@@ -2,11 +2,13 @@ import UIKit
 
 class ViewController: UIViewController {
     var game: Game!
-    
+
     @IBOutlet var slider: UISlider!
     @IBOutlet var label: UILabel!
-    
+    var scoreLabel: UILabel = UILabel(frame: CGRect(x: 20, y: 20, width: 300, height: 20))
+
     // MARK: - Работа с переходом к SecondViewController
+
     // ленивое свойство для хранения View Controller
     lazy var secondViewController: SecondViewController = getSecondViewController()
 
@@ -18,24 +20,26 @@ class ViewController: UIViewController {
         let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
         return viewController as! SecondViewController
     }
-    
+
     @IBAction func showNextScreen() {
         // Отображение сцены на экране
-        self.present(self.secondViewController, animated: true, completion: nil)
+        present(secondViewController, animated: true, completion: nil)
     }
+
     // MARK: - Жизненный цикл по загрузки экрана
+    
     override func loadView() {
         super.loadView()
-        // Создаем метку для вывода номера версии
-        let versionLabel = UILabel(frame: CGRect(x: 20, y: 20, width: 300, height: 20))
         // изменяем текст метки
-        versionLabel.text = "Версия 1.1 "
+        scoreLabel.text = "Очков:"
+        scoreLabel.textColor = .systemPink
         // добавляем метку в родительский view
-        self.view.addSubview(versionLabel)
+        view.addSubview(scoreLabel)
         print("loadView")
     }
 
     // MARK: - Жизненный цикл после загрузки экрана
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Create instance of Game
@@ -43,16 +47,17 @@ class ViewController: UIViewController {
         // Recalculate value of Label with Secret random value
         updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
     }
+
     // MARK: - Взаимодействие View - Model
-    
+
     // Check value that player choose
     @IBAction func checkNumber() {
         // calculate score by round
         game.calculateScore(with: Int(slider.value))
-        
+        updateScoreLabel(String(game.score))
         // Check if game is ended
         if game.isGameEnded {
-          //  showAlertWIth(score: game.score)
+            showAlertWith(score: game.score)
             // start game again
             game.restartGame()
         } else {
@@ -60,15 +65,27 @@ class ViewController: UIViewController {
         }
         // update new values from secret number generator
         updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
-        
     }
-   
+
     // MARK: - Обновление View
+
     // Обновление текста загаданного числа
-    private func updateLabelWithSecretNumber(newText: String ) {
+    private func updateLabelWithSecretNumber(newText: String) {
         label.text = newText
     }
     
-    
-    
+    // Обновление текста количества очков на экране
+    private func updateScoreLabel(_ newText: String) {
+        scoreLabel.text = "Очков: \(newText)"
+    }
+
+    private func showAlertWith(score: Int) {
+        let alert = UIAlertController(
+            title: "Игра окончена",
+            message: "Вы заработали \(score) очков",
+            preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Начать заново", style:
+            .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
