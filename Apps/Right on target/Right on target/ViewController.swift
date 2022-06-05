@@ -5,7 +5,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var slider: UISlider!
     @IBOutlet var label: UILabel!
-    var scoreLabel: UILabel = UILabel(frame: CGRect(x: 20, y: 20, width: 300, height: 20))
+    var scoreLabel: UILabel = .init(frame: CGRect(x: 20, y: 20, width: 300, height: 20))
 
     // MARK: - Работа с переходом к SecondViewController
 
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
 
     // MARK: - Жизненный цикл по загрузки экрана
-    
+
     override func loadView() {
         super.loadView()
         // изменяем текст метки
@@ -43,9 +43,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Create instance of Game
-        game = Game(startValue: 1, endValue: 50, rounds: 5)
+        game = Game(valueGenerator: NumberGenerator(from: 1, to: 50)!, rounds: 5)
+        game.startNewRound()
         // Recalculate value of Label with Secret random value
-        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
+        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
     }
 
     // MARK: - Взаимодействие View - Model
@@ -53,7 +54,7 @@ class ViewController: UIViewController {
     // Check value that player choose
     @IBAction func checkNumber() {
         // calculate score by round
-        game.calculateScore(with: Int(slider.value))
+        game.currentRound.calculateScore(with: Int(slider.value))
         updateScoreLabel(String(game.score))
         // Check if game is ended
         if game.isGameEnded {
@@ -64,7 +65,7 @@ class ViewController: UIViewController {
             game.startNewRound()
         }
         // update new values from secret number generator
-        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
+        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
     }
 
     // MARK: - Обновление View
@@ -73,7 +74,7 @@ class ViewController: UIViewController {
     private func updateLabelWithSecretNumber(newText: String) {
         label.text = newText
     }
-    
+
     // Обновление текста количества очков на экране
     private func updateScoreLabel(_ newText: String) {
         scoreLabel.text = "Очков: \(newText)"
@@ -86,6 +87,6 @@ class ViewController: UIViewController {
             preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Начать заново", style:
             .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }

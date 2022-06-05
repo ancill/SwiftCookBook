@@ -1,88 +1,53 @@
 import UIKit
 
 protocol GameProtocol {
-
-    // Проверяет, закончена ли игра
-    var isGameEnded: Bool { get }
-    // Начинает новую игру и сразу стартует первый раунд
-    func restartGame()
-    // Начинает новый раунд (обновляет загаданное число)
-    func startNewRound()
-
-}
-
-
-protocol GameRoundProtocol {
     // Количество заработанных очков
     var score: Int { get }
-    // Загаданное значение
-    var currentSecretValue: Int { get }
-    // Сравнивает переданное значение с загаданным и начисляет очки
-    func calculateScore(with value: Int)
-
+    // текущий раунд
+    var currentRound: GameRoundProtocol! { get }
+    // Проверяет, окончена ли игра
+    var isGameEnded: Bool { get }
+    // Генератор случайного значения
+    var secretValueGenerator: GeneratorProtocol { get }
+    // Начинает новую игру и сразу стартует первый раунд
+    func restartGame()
+    // Начинает новый раунд
+    func startNewRound()
 }
-
-protocol GeneratorProtocol {
-    
-}
-
 
 class Game: GameProtocol {
-    var score: Int = 0
-    // Минимальное загаданное значение
-    private var minSecretValue: Int
-    // Максимальное загаданное значение
-    private var maxSecretValue: Int
-    // Количество раундов
-    private var lastRound: Int
-    private var currentRound: Int = 1
-    
-    var currentSecretValue: Int = 0
-    
+    private var rounds: [GameRoundProtocol] = []
+    var score: Int {
+        var totalScore = 0
+        for round in rounds {
+            totalScore += round.score
+        }
+        return totalScore
+    }
+
+    var currentRound: GameRoundProtocol!
+    private var totalRoundsCount: Int!
+    var secretValueGenerator: GeneratorProtocol
     var isGameEnded: Bool {
-        if currentRound >= lastRound { return true
+        if totalRoundsCount == rounds.count {
+            return true
         } else {
             return false
         }
     }
-    
-    init?(startValue: Int, endValue: Int, rounds: Int) {
-        // Стартовое значение для выбора случайного числа не может быть больше конечного
-        guard startValue <= endValue else {
-            return nil
-        }
-        minSecretValue = startValue
-        maxSecretValue = endValue
-        lastRound = rounds
-        currentSecretValue = getNewSecretValue()
+
+    init(valueGenerator: NumberGenerator, rounds: Int) {
+        secretValueGenerator = valueGenerator
+        totalRoundsCount = rounds
     }
-    
-    // Загадать и вернуть новое случайное значение
-    func getNewSecretValue() -> Int {
-        (minSecretValue...maxSecretValue).randomElement()!
-    }
-    
-    // Перезапуск игры
+
     func restartGame() {
-        currentRound = 0
-        score = 0
+        rounds = []
         startNewRound()
     }
-    
-    // Начало нового раунда
+
     func startNewRound() {
-        currentSecretValue = self.getNewSecretValue()
-        currentRound += 1
-    }
-    
-    // Подсчет количество очков
-    func calculateScore(with value: Int) {
-        if value > currentSecretValue {
-            score += 50 - value + currentSecretValue
-        } else if value < currentSecretValue {
-            score += 50 - currentSecretValue + value
-        } else {
-            score += 50
-        }
+        currentRound = GameRound(secretValue: secretValueGenerator.getRandomValue())
+        rounds.append(currentRound)
     }
 }
