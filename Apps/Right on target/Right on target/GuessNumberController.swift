@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class GuessNumberController: UIViewController {
     var game: Game!
 
     @IBOutlet var slider: UISlider!
@@ -10,15 +10,15 @@ class ViewController: UIViewController {
     // MARK: - Работа с переходом к SecondViewController
 
     // ленивое свойство для хранения View Controller
-    lazy var secondViewController: SecondViewController = getSecondViewController()
+    lazy var secondViewController: GuessNumberController = getGuessNumberController()
 
     // приватный метод, загружающий View Controller
-    private func getSecondViewController() -> SecondViewController {
+    private func getGuessNumberController() -> GuessNumberController {
         // Загрузка storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         // Загрузка View Controller и его сцены со Storyboard
         let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
-        return viewController as! SecondViewController
+        return viewController as! GuessNumberController
     }
 
     @IBAction func showNextScreen() {
