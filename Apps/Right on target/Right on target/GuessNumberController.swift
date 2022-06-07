@@ -8,23 +8,23 @@ class GuessNumberController: UIViewController {
     var scoreLabel: UILabel = .init(frame: CGRect(x: 20, y: 20, width: 300, height: 20))
 
     // MARK: - Работа с переходом к SecondViewController
-
-    // ленивое свойство для хранения View Controller
-    lazy var secondViewController: GuessNumberController = getGuessNumberController()
-
-    // приватный метод, загружающий View Controller
-    private func getGuessNumberController() -> GuessNumberController {
-        // Загрузка storyboard
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        // Загрузка View Controller и его сцены со Storyboard
-        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
-        return viewController as! GuessNumberController
-    }
-
-    @IBAction func showNextScreen() {
-        // Отображение сцены на экране
-        present(secondViewController, animated: true, completion: nil)
-    }
+//
+//    // ленивое свойство для хранения View Controller
+//    lazy var secondViewController: GuessNumberController = getGuessNumberController()
+//
+//    // приватный метод, загружающий View Controller
+//    private func getGuessNumberController() -> GuessNumberController {
+//        // Загрузка storyboard
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        // Загрузка View Controller и его сцены со Storyboard
+//        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
+//        return viewController as! GuessNumberController
+//    }
+//
+//    @IBAction func showNextScreen() {
+//        // Отображение сцены на экране
+//        present(secondViewController, animated: true, completion: nil)
+//    }
 
     // MARK: - Жизненный цикл по загрузки экрана
 
