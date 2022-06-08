@@ -5,9 +5,11 @@ class GuessColorContoller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.textColor = .systemPink
+        // Create instance of Game
+        var number = NumberGenerator(from: 1, to: 255)?.getRandomValue()
+        print(number)
+        // Generate a random value
         
-        // Generate a random value 
         // Generate a hask value
         let color = UIColor(red: 0x22, green: 0xFF, blue: 0xFF)
         
