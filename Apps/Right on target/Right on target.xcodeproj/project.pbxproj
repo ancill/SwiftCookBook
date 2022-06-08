@@ -17,6 +17,7 @@
 		5C8C0D57284A0C6B00E81E69 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C0D56284A0C6B00E81E69 /* Game.swift */; };
 		5C9353A6284C9FBD0066CF36 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9353A5284C9FBD0066CF36 /* Generator.swift */; };
 		5C9353A8284CA3260066CF36 /* GameRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9353A7284CA3260066CF36 /* GameRound.swift */; };
+		5CDA49EA285088CB00946629 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDA49E9285088CB00946629 /* Color.swift */; };
 		5CF4C610284DF446007AF6BF /* GuessColorContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4C60F284DF446007AF6BF /* GuessColorContoller.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		5C8C0D56284A0C6B00E81E69 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		5C9353A5284C9FBD0066CF36 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		5C9353A7284CA3260066CF36 /* GameRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRound.swift; sourceTree = "<group>"; };
+		5CDA49E9285088CB00946629 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5CF4C60F284DF446007AF6BF /* GuessColorContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessColorContoller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 				5C8C0D56284A0C6B00E81E69 /* Game.swift */,
 				5C9353A5284C9FBD0066CF36 /* Generator.swift */,
 				5C9353A7284CA3260066CF36 /* GameRound.swift */,
+				5CDA49E9285088CB00946629 /* Color.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				5C02096B2844C66500424792 /* AppDelegate.swift in Sources */,
 				5C02096D2844C66500424792 /* SceneDelegate.swift in Sources */,
 				5CF4C610284DF446007AF6BF /* GuessColorContoller.swift in Sources */,
+				5CDA49EA285088CB00946629 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

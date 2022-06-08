@@ -5,7 +5,7 @@ class GuessNumberController: UIViewController {
 
     @IBOutlet var slider: UISlider!
     @IBOutlet var label: UILabel!
-    var scoreLabel: UILabel = .init(frame: CGRect(x: 20, y: 20, width: 300, height: 20))
+    var scoreLabel: UILabel = .init(frame: CGRect(x: 30, y: 40, width: 300, height: 20))
 
     // MARK: - Работа с переходом к SecondViewController
 //
