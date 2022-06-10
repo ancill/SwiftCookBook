@@ -4,42 +4,73 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
+    /*:
+     Метод willConnectTo вызывается перед тем, как UIKit присоединяет новую сцену (экземпляр интерфейса) к приложению.
+     Одним из вариантов использования метода является определение того, какой View Controller должен быть загружен первым, так как не всегда работу при- ложения нужно начинать с одной и той же сцены. К примеру, вы разработали приложение, разграничивающее доступ для авторизованного и неавторизован- ного пользователя. Если пользователь не авторизован, ему необходимо пока- зать экран ввода логина и пароля. В ином случае, он может быть сразу перебро- шен на главный экран приложения.
+     */
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        print("willConnectTo")
+    }
+    
+    /*:
+     Состояние Foreground говорит о том, что сцена (экземпляр интерфейса) на- ходится на переднем плане, т.е. отображается на экране устройства. Метод sceneWillEnterForeground вызывается перед переходом сцены в состояние Foreground, т.е. прямо перед тем, как будет отображен графический интерфейс.
+     Состояние Foreground включается в себя два варианта:
+     ● Foreground Inactive – сцена уже отображается на экране устройства, но все элементы «мертвы», т.е. недоступны пользователю (кнопки не нажи- маются, текстовые поля не активируются и т.д.). Данное состояние ис- пользуется системой для внесения финальных правок в интерфейс, а так- же в случае поступления особых «прерываний», вроде входящего звонка, поступления смс или активации голосового помощника Siri.
+     ● Foreground Active – пользователь может взаимодействовать с элементами сцены.
+     Примеры использования метода:
+     ● загрузка необходимых для работы приложения данных с диска или из сети.
+     */
+    func sceneWillEnterForeground(_ scene: UIScene) { print("sceneWillEnterForeground")
+    }
+    
+    /*:
+     После того, как сцена отобразилась на экране и стала активной для взаимодей- ствия, вызывается метод sceneDidBecomeActive. Вызов происходит уже после загрузки и отображения на экране всех графических элементов сцены.
+     Примеры использования метода:
+     ● запуск таймеров для выполнения задач с определенным периодом;
+     ● отображение кнопки для снятия игры с паузы.
+     
+     */
+    func sceneDidBecomeActive(_ scene: UIScene) { print("sceneDidBecomeActive")
+    }
+    
+    /*:
+     Метод sceneWillResignActive вызывается перед тем, как сцена перейдет в со- стояние Foreground Inactive и перестанет отвечать на действия пользователя.
+     Примеры использования метода:
+     ● остановка таймеров;
+     ● остановка фоновых задач, в выполнении которых нет необходимости; ● постановка игры на паузу;
+     ● сохранение данных пользователя в файл или базу данных.
+     */
+    func sceneWillResignActive(_ scene: UIScene) { print("sceneWillResignActive")
+    }
+    
+    /*:
+     Метод sceneDidEnterBackground вызывается сразу после перехода приложе- ния в фоновый режим. Это происходит, например, при сворачивании прило- жения по нажатию кнопки Home (или свайпом вверх на моделях iPhone / iPad без кнопки).
+     ● удаление элементов, занимающих большой объем памяти, которые могут безболезненно быть загружены в будущем;
+     ● скрытие информации, к которой должен быть ограничен доступ (таких, как пароль или номер карты);
+     ● закрытие подключения к общим системным базам данных, к которым больше не нужен доступ;
+     
+     ---------
+     ● получение данных с удаленного сервера;
+     ● использование AirPlay;
+     ● использование Bluetooth;
+     ● использование функции «Картинка в картинке»;
+     ● прием push-уведомлений и др.
+     
+     */
+    func sceneDidEnterBackground(_ scene: UIScene) { print("sceneDidEnterBackground")
     }
 
-    func sceneDidDisconnect(_ scene: UIScene) {
-        // Called as the scene is being released by the system.
-        // This occurs shortly after the scene enters the background, or when its session is discarded.
-        // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+    /*:
+     Метод sceneDidDisconnect вызывается после того, как сцена удаляется из при- ложения. Обычно это происходит, когда пользователь закрывает приложение в App Switcher.
+     Примеры использования метода:
+     ● проведение финальной очистки, удаление временных файлов;
+     ● отключение от общих ресурсов;
+     ● сохранение пользовательских данных.
+     */
+    func sceneDidDisconnect(_ scene: UIScene) { print("sceneDidDisconnect")
     }
-
-    func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-    }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
-    }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
-    }
-
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
-    }
-
+    
 
 }
 
