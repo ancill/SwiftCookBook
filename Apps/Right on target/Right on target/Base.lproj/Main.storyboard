@@ -156,9 +156,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKU-Dg-Ujf">
                                         <rect key="frame" x="136.5" y="0.0" width="93.5" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Вариант 2">
-                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
-                                        </buttonConfiguration>
+                                        <buttonConfiguration key="configuration" style="filled" title="Вариант 2"/>
                                         <connections>
                                             <action selector="clickOnButtonTwo:" destination="50q-HT-eLd" eventType="touchUpInside" id="4vH-qE-P1h"/>
                                         </connections>
@@ -166,9 +164,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azc-cx-LEI">
                                         <rect key="frame" x="273" y="0.0" width="93.5" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Вариант 3">
-                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
-                                        </buttonConfiguration>
+                                        <buttonConfiguration key="configuration" style="filled" title="Вариант 3"/>
                                         <connections>
                                             <action selector="clickOnButtonThree:" destination="50q-HT-eLd" eventType="touchUpInside" id="UaC-JS-h52"/>
                                         </connections>
@@ -176,9 +172,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOT-w0-sWL">
                                         <rect key="frame" x="409.5" y="0.0" width="93.5" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Вариант 4">
-                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
-                                        </buttonConfiguration>
+                                        <buttonConfiguration key="configuration" style="filled" title="Вариант 4"/>
                                         <connections>
                                             <action selector="clickOnButtonFour:" destination="50q-HT-eLd" eventType="touchUpInside" id="xrF-ps-br6"/>
                                         </connections>
@@ -205,6 +199,10 @@
                     <navigationItem key="navigationItem" id="i1h-fr-QJi"/>
                     <connections>
                         <outlet property="label" destination="fEe-r7-0wr" id="6uO-tn-Nao"/>
+                        <outletCollection property="buttons" destination="AOh-s4-xVj" collectionClass="NSMutableArray" id="VEb-Lw-rgP"/>
+                        <outletCollection property="buttons" destination="iKU-Dg-Ujf" collectionClass="NSMutableArray" id="EBN-bH-e0J"/>
+                        <outletCollection property="buttons" destination="Azc-cx-LEI" collectionClass="NSMutableArray" id="0d3-y5-A1x"/>
+                        <outletCollection property="buttons" destination="XOT-w0-sWL" collectionClass="NSMutableArray" id="buy-Pd-cRG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dm-IG-R8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

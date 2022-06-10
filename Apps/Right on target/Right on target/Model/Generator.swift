@@ -1,6 +1,7 @@
 import Foundation
 
 protocol GeneratorProtocol {
+    var range: (startRangeValue: Int, endRangeValue: Int)  {get}
     func getRandomValue() -> Int
 }
 
