@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var userDefaults = UserDefaults.standard
+    
    // наблюдатель к свойству contacts, сортирующий массив контактов при каждом его изменении
     private var contacts: [ContactProtocol] = [] {
         didSet {
@@ -19,6 +21,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print( userDefaults.object(forKey: "Some key") )
+        print( userDefaults.string(forKey: "Some key") )
+        
         loadContacts()
     }
 
