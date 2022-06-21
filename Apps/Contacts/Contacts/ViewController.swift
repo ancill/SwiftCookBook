@@ -20,6 +20,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        userDefaults.set("Some random text", forKey: "Some key")
 
         print( userDefaults.object(forKey: "Some key") )
         print( userDefaults.string(forKey: "Some key") )
