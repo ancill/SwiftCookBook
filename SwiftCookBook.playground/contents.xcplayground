@@ -11,5 +11,6 @@
         <page name='Operators'/>
         <page name='DelegatePattern'/>
         <page name='DataSourcePattern'/>
+        <page name='FolderStructure'/>
     </pages>
 </playground>
