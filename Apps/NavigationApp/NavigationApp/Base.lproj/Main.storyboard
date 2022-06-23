@@ -20,6 +20,9 @@
                                 <rect key="frame" x="164" y="432.5" width="86" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="to orange"/>
+                                <connections>
+                                    <action selector="toOrangeScene:" destination="pZq-6s-LDf" eventType="touchUpInside" id="q26-e9-35V"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GHP-Vi-dIL"/>
@@ -47,12 +50,25 @@
                                 <rect key="frame" x="168" y="432.5" width="78" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="to green"/>
+                                <connections>
+                                    <action selector="toGreenScene:" destination="1LY-nq-Zr6" eventType="touchUpInside" id="Srk-cW-vSD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f3-ju-jhS">
+                                <rect key="frame" x="35" y="44" width="55.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="back"/>
+                                <connections>
+                                    <action selector="toPreviousScene:" destination="1LY-nq-Zr6" eventType="touchUpInside" id="FUw-Cx-XW4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BI4-ml-h01"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="fvQ-6w-o6b" firstAttribute="centerX" secondItem="zbX-8w-FQx" secondAttribute="centerX" id="IRQ-my-QJu"/>
+                            <constraint firstItem="2f3-ju-jhS" firstAttribute="leading" secondItem="BI4-ml-h01" secondAttribute="leading" constant="35" id="Q1S-ye-SXl"/>
+                            <constraint firstItem="2f3-ju-jhS" firstAttribute="top" secondItem="BI4-ml-h01" secondAttribute="top" id="aub-CB-GxE"/>
                             <constraint firstItem="fvQ-6w-o6b" firstAttribute="centerY" secondItem="zbX-8w-FQx" secondAttribute="centerY" id="ueA-kJ-AAa"/>
                         </constraints>
                     </view>
@@ -62,7 +78,7 @@
             </objects>
             <point key="canvasLocation" x="1533" y="678"/>
         </scene>
-        <!--View Controller-->
+        <!--Green Scene-->
         <scene sceneID="dCY-Qw-X6T">
             <objects>
                 <viewController storyboardIdentifier="greenViewController" id="8cr-cP-cGg" customClass="ViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,16 +90,29 @@
                                 <rect key="frame" x="151" y="432.5" width="112" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="To root scene"/>
+                                <connections>
+                                    <action selector="toRootScene:" destination="8cr-cP-cGg" eventType="touchUpInside" id="cQq-Df-SNr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeM-6b-pGK">
+                                <rect key="frame" x="35" y="44" width="55.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="back"/>
+                                <connections>
+                                    <action selector="toPreviousScene:" destination="8cr-cP-cGg" eventType="touchUpInside" id="WSb-dW-04z"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dEG-bE-R1t"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="Tmn-kg-ftc" firstAttribute="centerY" secondItem="Q9E-eE-zJr" secondAttribute="centerY" id="3od-4t-3nM"/>
+                            <constraint firstItem="jeM-6b-pGK" firstAttribute="top" secondItem="dEG-bE-R1t" secondAttribute="top" id="8sn-MT-lkR"/>
+                            <constraint firstItem="jeM-6b-pGK" firstAttribute="leading" secondItem="dEG-bE-R1t" secondAttribute="leading" constant="35" id="G3T-3W-Wff"/>
                             <constraint firstItem="Tmn-kg-ftc" firstAttribute="centerX" secondItem="Q9E-eE-zJr" secondAttribute="centerX" id="XBU-hA-SCR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Swo-wt-QE9"/>
+                    <navigationItem key="navigationItem" title="Green Scene" id="Swo-wt-QE9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Nh-fL-Itr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
