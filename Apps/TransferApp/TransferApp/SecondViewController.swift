@@ -3,11 +3,13 @@
 //  TransferApp
 //
 //  Created by 19072382 on 24.06.2022.
-//
-
 import UIKit
 
-class SecondViewController: UIViewController {
+protocol UpdatingDataController: AnyObject {
+    var updatingData: String { get set }
+}
+
+class SecondViewController: UIViewController, UpdatingDataController {
     @IBOutlet var dataTextField: UITextField!
     var updatingData: String = ""
 
@@ -26,6 +28,4 @@ class SecondViewController: UIViewController {
     private func updateTextFieldData(withText text: String) {
         dataTextField.text = text
     }
-
-
 }
