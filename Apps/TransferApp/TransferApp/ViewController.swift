@@ -8,14 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet var dataLabel: UILabel!
-    
+    var updatedData: String = "Text test"
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateLabel(withText: updatedData)
+    }
+
+    // Reload text in text field
+    private func updateLabel(withText text: String) {
+        dataLabel.text = text
+    }
+
     @IBAction func editDataWithProperty(_ sender: UIButton) {
         // получаем вью контроллер, в который происходит переход
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -23,8 +32,6 @@ class ViewController: UIViewController {
         // передаем данные
         editScreen.updatingData = dataLabel.text ?? ""
         // переходим к следующему экрану
-        self.navigationController?.pushViewController(editScreen, animated: true)
+        navigationController?.pushViewController(editScreen, animated: true)
     }
-
 }
-
