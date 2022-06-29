@@ -7,7 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol UpdatableDataController: AnyObject {
+    var updatedData: String { get set }
+}
+
+class ViewController: UIViewController, UpdatableDataController {
+
     @IBOutlet var dataLabel: UILabel!
     var updatedData: String = "Text test"
 
@@ -32,6 +37,6 @@ class ViewController: UIViewController {
         // передаем данные
         editScreen.updatingData = dataLabel.text ?? ""
         // переходим к следующему экрану
-        navigationController?.pushViewController(editScreen, animated: true)
+        navigationController?.pushViewController(editScreen as! UIViewController, animated: true)
     }
 }

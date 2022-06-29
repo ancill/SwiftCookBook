@@ -66,14 +66,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqy-cG-vdZ">
+                                <rect key="frame" x="30" y="466" width="354" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сохранить с помощью свойства">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveDataWithProperty:" destination="YFd-8R-dho" eventType="touchUpInside" id="xMC-tH-LN3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2zo-zn-627"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
                             <constraint firstItem="2zo-zn-627" firstAttribute="trailing" secondItem="ACr-xz-sqk" secondAttribute="trailing" constant="30" id="AOV-JL-IPm"/>
                             <constraint firstItem="ACr-xz-sqk" firstAttribute="top" secondItem="2zo-zn-627" secondAttribute="top" constant="358" id="M98-mS-yCz"/>
+                            <constraint firstItem="sqy-cG-vdZ" firstAttribute="centerX" secondItem="Hb8-1l-VM9" secondAttribute="centerX" id="MKT-b2-KZW"/>
                             <constraint firstItem="ACr-xz-sqk" firstAttribute="centerX" secondItem="Hb8-1l-VM9" secondAttribute="centerX" id="ZTP-xV-clp"/>
+                            <constraint firstItem="2zo-zn-627" firstAttribute="trailing" secondItem="sqy-cG-vdZ" secondAttribute="trailing" constant="30" id="eXL-88-mr5"/>
                             <constraint firstItem="ACr-xz-sqk" firstAttribute="leading" secondItem="2zo-zn-627" secondAttribute="leading" constant="30" id="hbe-TF-qJE"/>
+                            <constraint firstItem="sqy-cG-vdZ" firstAttribute="leading" secondItem="2zo-zn-627" secondAttribute="leading" constant="30" id="pAA-Z0-FVI"/>
+                            <constraint firstItem="sqy-cG-vdZ" firstAttribute="top" secondItem="ACr-xz-sqk" secondAttribute="bottom" constant="30" id="wP4-T8-4lw"/>
                         </constraints>
                     </view>
                     <connections>
