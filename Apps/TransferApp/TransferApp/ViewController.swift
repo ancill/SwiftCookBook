@@ -15,7 +15,6 @@ class ViewController: UIViewController, UpdatableDataController, DataUpdateProto
     @IBOutlet var dataLabel: UILabel!
     var updatedData: String = "Text test"
 
-    
     @IBAction func unwindToFirstScreen(_ segue: UIStoryboardSegue) {}
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +28,11 @@ class ViewController: UIViewController, UpdatableDataController, DataUpdateProto
     func onDataUpdate(data: String) {
         updatedData = data
         updateLabel(withText: data)
+    }
+
+    // Reload text in text field
+    private func updateLabel(withText text: String) {
+        dataLabel.text = text
     }
 
     // переход от А к Б
@@ -45,11 +49,20 @@ class ViewController: UIViewController, UpdatableDataController, DataUpdateProto
         navigationController?.pushViewController(editScreen, animated: true)
     }
 
-    // Reload text in text field
-    private func updateLabel(withText text: String) {
-        dataLabel.text = text
+    @IBAction func editDataWithСlosure(_ sender: UIButton) {
+        // получаем вью контроллер
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let editScreen = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        // передаем данные
+        editScreen.updatingData = dataLabel.text ?? ""
+        // передаем необходимое замыкание
+        editScreen.completionHandler = { [unowned self] updatedValue in
+            updatedData = updatedValue
+            updateLabel(withText: updatedValue)
+        }
+        // открываем следующий экран
+        navigationController?.pushViewController(editScreen, animated: true)
     }
-
 
     @IBAction func editDataWithProperty(_ sender: UIButton) {
         // получаем вью контроллер, в который происходит переход

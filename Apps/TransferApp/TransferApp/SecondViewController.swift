@@ -55,14 +55,25 @@ class SecondViewController: UIViewController, UpdatingDataController {
         }
         destinationController.updatedData = dataTextField.text ?? ""
     }
-    
+
     // Переход от Б к А
     // Передача данных с помощью делегата
-    @IBAction func saveDataWithDelegate (_ sender: UIButton) {
+    @IBAction func saveDataWithDelegate(_ sender: UIButton) {
         // получаем обновленные данные
         let updatedData = dataTextField.text ?? ""
         // вызываем метод делегата
         handleUpdatedDataDelegate?.onDataUpdate(data: updatedData)
+        // возвращаемся на предыдущий экран
+        navigationController?.popViewController(animated: true)
+    }
+
+    // Переход от Б к А
+    // Передача данных с помощью замыкания
+    @IBAction func saveDataWithClosure(_ sender: UIButton) {
+        // получаем обновленные данные
+        let updatedData = dataTextField.text ?? ""
+        // вызваем замыкание
+        completionHandler?(updatedData)
         // возвращаемся на предыдущий экран
         navigationController?.popViewController(animated: true)
     }

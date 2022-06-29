@@ -135,18 +135,31 @@
                                     <action selector="saveDataWithDelegate:" destination="YFd-8R-dho" eventType="touchUpInside" id="4D6-pJ-4oG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrV-HH-f3T">
+                                <rect key="frame" x="30" y="766" width="330" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сохранить с помощью замыкания">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveDataWithClosure:" destination="YFd-8R-dho" eventType="touchUpInside" id="lTQ-eb-46U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2zo-zn-627"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
                             <constraint firstItem="OF1-Dl-s4p" firstAttribute="leading" secondItem="2zo-zn-627" secondAttribute="leading" constant="30" id="7OZ-Ic-8pH"/>
+                            <constraint firstItem="PrV-HH-f3T" firstAttribute="centerX" secondItem="Hb8-1l-VM9" secondAttribute="centerX" id="7vz-9r-foY"/>
                             <constraint firstItem="2zo-zn-627" firstAttribute="trailing" secondItem="ACr-xz-sqk" secondAttribute="trailing" constant="30" id="AOV-JL-IPm"/>
                             <constraint firstItem="TxL-g5-tvy" firstAttribute="leading" secondItem="2zo-zn-627" secondAttribute="leading" constant="30" id="H8Z-EE-VOw"/>
                             <constraint firstItem="2zo-zn-627" firstAttribute="trailing" secondItem="TxL-g5-tvy" secondAttribute="trailing" constant="30" id="I7E-28-owa"/>
                             <constraint firstItem="ACr-xz-sqk" firstAttribute="top" secondItem="2zo-zn-627" secondAttribute="top" constant="358" id="M98-mS-yCz"/>
                             <constraint firstItem="sqy-cG-vdZ" firstAttribute="centerX" secondItem="Hb8-1l-VM9" secondAttribute="centerX" id="MKT-b2-KZW"/>
+                            <constraint firstItem="2zo-zn-627" firstAttribute="trailing" secondItem="PrV-HH-f3T" secondAttribute="trailing" constant="30" id="Neb-cZ-NRj"/>
                             <constraint firstItem="ACr-xz-sqk" firstAttribute="centerX" secondItem="Hb8-1l-VM9" secondAttribute="centerX" id="ZTP-xV-clp"/>
                             <constraint firstItem="OF1-Dl-s4p" firstAttribute="centerX" secondItem="Hb8-1l-VM9" secondAttribute="centerX" id="cAn-cO-FNQ"/>
+                            <constraint firstItem="PrV-HH-f3T" firstAttribute="leading" secondItem="2zo-zn-627" secondAttribute="leading" constant="30" id="cOs-N3-tAx"/>
                             <constraint firstItem="TxL-g5-tvy" firstAttribute="top" secondItem="OF1-Dl-s4p" secondAttribute="bottom" constant="30" id="eTW-Ic-DFM"/>
                             <constraint firstItem="2zo-zn-627" firstAttribute="trailing" secondItem="sqy-cG-vdZ" secondAttribute="trailing" constant="30" id="eXL-88-mr5"/>
                             <constraint firstItem="ACr-xz-sqk" firstAttribute="leading" secondItem="2zo-zn-627" secondAttribute="leading" constant="30" id="hbe-TF-qJE"/>
@@ -154,6 +167,7 @@
                             <constraint firstItem="sqy-cG-vdZ" firstAttribute="leading" secondItem="2zo-zn-627" secondAttribute="leading" constant="30" id="pAA-Z0-FVI"/>
                             <constraint firstItem="TxL-g5-tvy" firstAttribute="centerX" secondItem="Hb8-1l-VM9" secondAttribute="centerX" id="r0R-nK-qWq"/>
                             <constraint firstItem="2zo-zn-627" firstAttribute="trailing" secondItem="OF1-Dl-s4p" secondAttribute="trailing" constant="30" id="rb2-wg-t9y"/>
+                            <constraint firstItem="PrV-HH-f3T" firstAttribute="top" secondItem="TxL-g5-tvy" secondAttribute="bottom" constant="30" id="ub9-4v-alK"/>
                             <constraint firstItem="sqy-cG-vdZ" firstAttribute="top" secondItem="ACr-xz-sqk" secondAttribute="bottom" constant="30" id="wP4-T8-4lw"/>
                         </constraints>
                     </view>
