@@ -12,6 +12,7 @@ protocol UpdatingDataController: AnyObject {
 class SecondViewController: UIViewController, UpdatingDataController {
     @IBOutlet var dataTextField: UITextField!
     var updatingData: String = ""
+    var handleUpdatedDataDelegate: DataUpdateProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,5 +34,24 @@ class SecondViewController: UIViewController, UpdatingDataController {
     // обновляем данные в текстовом поле
     private func updateTextFieldData(withText text: String) {
         dataTextField.text = text
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { // определяем идентификатор segue
+        switch segue.identifier {
+        case "toFirstScreen":
+            // обрабатываем переход
+            prepareFirstScreen(segue)
+        default:
+            break
+        }
+    }
+
+    // подготовка к переходу на первый экран
+    private func prepareFirstScreen(_ segue: UIStoryboardSegue) {
+        // безопасно извлекаем опциональное значение
+        guard let destinationController = segue.destination as? ViewController else {
+            return
+        }
+        destinationController.updatedData = dataTextField.text ?? ""
     }
 }

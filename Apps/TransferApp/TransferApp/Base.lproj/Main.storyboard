@@ -32,15 +32,43 @@
                                     <action selector="editDataWithProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5SZ-qn-RUc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnl-nj-3OZ">
+                                <rect key="frame" x="30" y="564" width="354" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Изменить с помощью segue">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="YFd-8R-dho" kind="show" identifier="toEditScreen" id="hi6-Gn-SBd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75R-cY-X0P">
+                                <rect key="frame" x="30" y="632" width="354" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Изменить с помощью делегата">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="editDataWithDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tcS-pe-HbE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
                             <constraint firstItem="qfz-3x-60f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3iR-x7-nGL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fnl-nj-3OZ" secondAttribute="trailing" constant="30" id="62i-ok-ZzW"/>
                             <constraint firstItem="qfz-3x-60f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="63h-lE-Dc5"/>
+                            <constraint firstItem="75R-cY-X0P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Co3-yt-7kd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="75R-cY-X0P" secondAttribute="trailing" constant="30" id="DEE-41-ga7"/>
+                            <constraint firstItem="Fnl-nj-3OZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EgS-be-Uig"/>
                             <constraint firstItem="30m-wA-UzX" firstAttribute="top" secondItem="qfz-3x-60f" secondAttribute="bottom" constant="30" id="FeA-0z-pfc"/>
+                            <constraint firstItem="Fnl-nj-3OZ" firstAttribute="top" secondItem="30m-wA-UzX" secondAttribute="bottom" constant="30" id="QuE-EC-6pV"/>
                             <constraint firstItem="30m-wA-UzX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="UtK-hy-doG"/>
+                            <constraint firstItem="75R-cY-X0P" firstAttribute="top" secondItem="Fnl-nj-3OZ" secondAttribute="bottom" constant="30" id="Z9V-es-oc8"/>
+                            <constraint firstItem="Fnl-nj-3OZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ZB1-UI-k7F"/>
                             <constraint firstItem="30m-wA-UzX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e9S-FA-yzT"/>
+                            <constraint firstItem="75R-cY-X0P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oQe-ai-25M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="30m-wA-UzX" secondAttribute="trailing" constant="30" id="sET-eO-ao8"/>
                         </constraints>
                     </view>
@@ -53,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Сцена Б-->
         <scene sceneID="XIy-Vs-qOF">
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" id="YFd-8R-dho" customClass="SecondViewController" customModule="TransferApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,12 +90,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACr-xz-sqk">
-                                <rect key="frame" x="30" y="402" width="354" height="34"/>
+                                <rect key="frame" x="30" y="498" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqy-cG-vdZ">
-                                <rect key="frame" x="30" y="466" width="354" height="38"/>
+                                <rect key="frame" x="30" y="562" width="354" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Сохранить с помощью свойства">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
@@ -76,25 +104,52 @@
                                     <action selector="saveDataWithProperty:" destination="YFd-8R-dho" eventType="touchUpInside" id="xMC-tH-LN3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OF1-Dl-s4p">
+                                <rect key="frame" x="30" y="630" width="354" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сохранить с помощью unwind">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="gpc-8p-ni4" kind="unwind" identifier="toFirstScreen" unwindAction="unwindToFirstScreen:" id="enR-Wi-Cek"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxL-g5-tvy">
+                                <rect key="frame" x="30" y="698" width="354" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сохранить с помощью делегата">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2zo-zn-627"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
+                            <constraint firstItem="OF1-Dl-s4p" firstAttribute="leading" secondItem="2zo-zn-627" secondAttribute="leading" constant="30" id="7OZ-Ic-8pH"/>
                             <constraint firstItem="2zo-zn-627" firstAttribute="trailing" secondItem="ACr-xz-sqk" secondAttribute="trailing" constant="30" id="AOV-JL-IPm"/>
+                            <constraint firstItem="TxL-g5-tvy" firstAttribute="leading" secondItem="2zo-zn-627" secondAttribute="leading" constant="30" id="H8Z-EE-VOw"/>
+                            <constraint firstItem="2zo-zn-627" firstAttribute="trailing" secondItem="TxL-g5-tvy" secondAttribute="trailing" constant="30" id="I7E-28-owa"/>
                             <constraint firstItem="ACr-xz-sqk" firstAttribute="top" secondItem="2zo-zn-627" secondAttribute="top" constant="358" id="M98-mS-yCz"/>
                             <constraint firstItem="sqy-cG-vdZ" firstAttribute="centerX" secondItem="Hb8-1l-VM9" secondAttribute="centerX" id="MKT-b2-KZW"/>
                             <constraint firstItem="ACr-xz-sqk" firstAttribute="centerX" secondItem="Hb8-1l-VM9" secondAttribute="centerX" id="ZTP-xV-clp"/>
+                            <constraint firstItem="OF1-Dl-s4p" firstAttribute="centerX" secondItem="Hb8-1l-VM9" secondAttribute="centerX" id="cAn-cO-FNQ"/>
+                            <constraint firstItem="TxL-g5-tvy" firstAttribute="top" secondItem="OF1-Dl-s4p" secondAttribute="bottom" constant="30" id="eTW-Ic-DFM"/>
                             <constraint firstItem="2zo-zn-627" firstAttribute="trailing" secondItem="sqy-cG-vdZ" secondAttribute="trailing" constant="30" id="eXL-88-mr5"/>
                             <constraint firstItem="ACr-xz-sqk" firstAttribute="leading" secondItem="2zo-zn-627" secondAttribute="leading" constant="30" id="hbe-TF-qJE"/>
+                            <constraint firstItem="OF1-Dl-s4p" firstAttribute="top" secondItem="sqy-cG-vdZ" secondAttribute="bottom" constant="30" id="nyM-Ov-TeS"/>
                             <constraint firstItem="sqy-cG-vdZ" firstAttribute="leading" secondItem="2zo-zn-627" secondAttribute="leading" constant="30" id="pAA-Z0-FVI"/>
+                            <constraint firstItem="TxL-g5-tvy" firstAttribute="centerX" secondItem="Hb8-1l-VM9" secondAttribute="centerX" id="r0R-nK-qWq"/>
+                            <constraint firstItem="2zo-zn-627" firstAttribute="trailing" secondItem="OF1-Dl-s4p" secondAttribute="trailing" constant="30" id="rb2-wg-t9y"/>
                             <constraint firstItem="sqy-cG-vdZ" firstAttribute="top" secondItem="ACr-xz-sqk" secondAttribute="bottom" constant="30" id="wP4-T8-4lw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Сцена Б" largeTitleDisplayMode="always" id="UP4-1h-gq0"/>
                     <connections>
                         <outlet property="dataTextField" destination="ACr-xz-sqk" id="9ss-ot-3XW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFJ-RF-oDS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="gpc-8p-ni4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1670" y="98"/>
         </scene>
