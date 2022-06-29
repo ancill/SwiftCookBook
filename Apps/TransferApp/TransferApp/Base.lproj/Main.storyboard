@@ -58,6 +58,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Изменить с помощью замыкания" titleAlignment="center">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="editDataWithСlosure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hLX-0x-yNe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
