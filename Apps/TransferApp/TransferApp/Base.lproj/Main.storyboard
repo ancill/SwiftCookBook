@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YLj-Su-qvh">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,44 +13,51 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="TransferApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfz-3x-60f">
-                                <rect key="frame" x="171.5" y="430" width="71" height="36"/>
+                                <rect key="frame" x="159.66666666666666" y="404" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30m-wA-UzX">
-                                <rect key="frame" x="30" y="496" width="354" height="38"/>
+                                <rect key="frame" x="30" y="470" width="330" height="37"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Изменить с помощью свойства">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="editDataWithProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5SZ-qn-RUc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnl-nj-3OZ">
-                                <rect key="frame" x="30" y="564" width="354" height="38"/>
+                                <rect key="frame" x="30" y="537" width="330" height="37"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Изменить с помощью segue">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="YFd-8R-dho" kind="show" identifier="toEditScreen" id="hi6-Gn-SBd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75R-cY-X0P">
-                                <rect key="frame" x="30" y="632" width="354" height="38"/>
+                                <rect key="frame" x="30" y="604" width="330" height="37"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Изменить с помощью делегата">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="editDataWithDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tcS-pe-HbE"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptV-Cc-x2K">
+                                <rect key="frame" x="30" y="674" width="330" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Изменить с помощью замыкания" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -63,13 +70,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="75R-cY-X0P" secondAttribute="trailing" constant="30" id="DEE-41-ga7"/>
                             <constraint firstItem="Fnl-nj-3OZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EgS-be-Uig"/>
                             <constraint firstItem="30m-wA-UzX" firstAttribute="top" secondItem="qfz-3x-60f" secondAttribute="bottom" constant="30" id="FeA-0z-pfc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ptV-Cc-x2K" secondAttribute="trailing" constant="30" id="KJx-Wc-Ja0"/>
                             <constraint firstItem="Fnl-nj-3OZ" firstAttribute="top" secondItem="30m-wA-UzX" secondAttribute="bottom" constant="30" id="QuE-EC-6pV"/>
                             <constraint firstItem="30m-wA-UzX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="UtK-hy-doG"/>
                             <constraint firstItem="75R-cY-X0P" firstAttribute="top" secondItem="Fnl-nj-3OZ" secondAttribute="bottom" constant="30" id="Z9V-es-oc8"/>
                             <constraint firstItem="Fnl-nj-3OZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ZB1-UI-k7F"/>
                             <constraint firstItem="30m-wA-UzX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e9S-FA-yzT"/>
+                            <constraint firstItem="ptV-Cc-x2K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="jvr-dN-wsL"/>
+                            <constraint firstItem="ptV-Cc-x2K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ndc-0G-fWe"/>
                             <constraint firstItem="75R-cY-X0P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oQe-ai-25M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="30m-wA-UzX" secondAttribute="trailing" constant="30" id="sET-eO-ao8"/>
+                            <constraint firstItem="ptV-Cc-x2K" firstAttribute="top" secondItem="75R-cY-X0P" secondAttribute="bottom" constant="30" id="tCC-pC-egv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Сцена А" largeTitleDisplayMode="always" id="8Gb-Jw-Is3"/>
@@ -79,23 +90,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+            <point key="canvasLocation" x="927.69230769230762" y="97.393364928909946"/>
         </scene>
         <!--Сцена Б-->
         <scene sceneID="XIy-Vs-qOF">
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" id="YFd-8R-dho" customClass="SecondViewController" customModule="TransferApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hb8-1l-VM9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACr-xz-sqk">
-                                <rect key="frame" x="30" y="498" width="354" height="34"/>
+                                <rect key="frame" x="30" y="498" width="330" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqy-cG-vdZ">
-                                <rect key="frame" x="30" y="562" width="354" height="38"/>
+                                <rect key="frame" x="30" y="562" width="330" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Сохранить с помощью свойства">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
@@ -105,7 +116,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OF1-Dl-s4p">
-                                <rect key="frame" x="30" y="630" width="354" height="38"/>
+                                <rect key="frame" x="30" y="630" width="330" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Сохранить с помощью unwind">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
@@ -115,11 +126,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxL-g5-tvy">
-                                <rect key="frame" x="30" y="698" width="354" height="38"/>
+                                <rect key="frame" x="30" y="698" width="330" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Сохранить с помощью делегата">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveDataWithDelegate:" destination="YFd-8R-dho" eventType="touchUpInside" id="4D6-pJ-4oG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2zo-zn-627"/>
@@ -159,7 +173,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YLj-Su-qvh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="RU9-ir-W41">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
