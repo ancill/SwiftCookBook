@@ -1,0 +1,987 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CE81BD0286DA741000E21AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE81BCF286DA741000E21AC /* AppDelegate.swift */; };
+		5CE81BD2286DA741000E21AC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE81BD1286DA741000E21AC /* GameViewController.swift */; };
+		5CE81BD5286DA741000E21AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BD3286DA741000E21AC /* Main.storyboard */; };
+		5CE81BD8286DA741000E21AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BD6286DA741000E21AC /* LaunchScreen.storyboard */; };
+		5CE81BDC286DA741000E21AC /* Pokee.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5CE81BDB286DA741000E21AC /* Pokee.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5CE81BE2286DA741000E21AC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BE0286DA741000E21AC /* Interface.storyboard */; };
+		5CE81BE8286DA742000E21AC /* Pokee Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5CE81BE7286DA742000E21AC /* Pokee Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5CE81BED286DA742000E21AC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE81BEC286DA742000E21AC /* InterfaceController.swift */; };
+		5CE81BEF286DA742000E21AC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE81BEE286DA742000E21AC /* ExtensionDelegate.swift */; };
+		5CE81BF8286DA742000E21AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE81BF7286DA742000E21AC /* AppDelegate.swift */; };
+		5CE81BFA286DA742000E21AC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE81BF9286DA742000E21AC /* GameViewController.swift */; };
+		5CE81BFD286DA742000E21AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BFB286DA742000E21AC /* Main.storyboard */; };
+		5CE81C00286DA742000E21AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BFE286DA742000E21AC /* LaunchScreen.storyboard */; };
+		5CE81C08286DA742000E21AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE81C07286DA742000E21AC /* AppDelegate.swift */; };
+		5CE81C0A286DA742000E21AC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE81C09286DA742000E21AC /* GameViewController.swift */; };
+		5CE81C0D286DA742000E21AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81C0B286DA742000E21AC /* Main.storyboard */; };
+		5CE81C0F286DA742000E21AC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BC4286DA73E000E21AC /* Actions.sks */; };
+		5CE81C10286DA742000E21AC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BC4286DA73E000E21AC /* Actions.sks */; };
+		5CE81C11286DA742000E21AC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BC4286DA73E000E21AC /* Actions.sks */; };
+		5CE81C12286DA742000E21AC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BC5286DA73E000E21AC /* GameScene.sks */; };
+		5CE81C13286DA742000E21AC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BC5286DA73E000E21AC /* GameScene.sks */; };
+		5CE81C14286DA742000E21AC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BC5286DA73E000E21AC /* GameScene.sks */; };
+		5CE81C15286DA742000E21AC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BC5286DA73E000E21AC /* GameScene.sks */; };
+		5CE81C16286DA742000E21AC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE81BC6286DA73E000E21AC /* GameScene.swift */; };
+		5CE81C17286DA742000E21AC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE81BC6286DA73E000E21AC /* GameScene.swift */; };
+		5CE81C18286DA742000E21AC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE81BC6286DA73E000E21AC /* GameScene.swift */; };
+		5CE81C19286DA742000E21AC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE81BC6286DA73E000E21AC /* GameScene.swift */; };
+		5CE81C1A286DA742000E21AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BC7286DA741000E21AC /* Assets.xcassets */; };
+		5CE81C1B286DA742000E21AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BC7286DA741000E21AC /* Assets.xcassets */; };
+		5CE81C1C286DA742000E21AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BC7286DA741000E21AC /* Assets.xcassets */; };
+		5CE81C1D286DA742000E21AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE81BC7286DA741000E21AC /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5CE81BDD286DA741000E21AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CE81BBF286DA73E000E21AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CE81BDA286DA741000E21AC;
+			remoteInfo = "Pokee watchOS App";
+		};
+		5CE81BE9286DA742000E21AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CE81BBF286DA73E000E21AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CE81BE6286DA742000E21AC;
+			remoteInfo = "Pokee watchOS App Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5CE81C23286DA742000E21AC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5CE81BE8286DA742000E21AC /* Pokee Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE81C27286DA742000E21AC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				5CE81BDC286DA741000E21AC /* Pokee.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5CE81BC4286DA73E000E21AC /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		5CE81BC5286DA73E000E21AC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		5CE81BC6286DA73E000E21AC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5CE81BC7286DA741000E21AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CE81BCC286DA741000E21AC /* Pokee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CE81BCF286DA741000E21AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5CE81BD1286DA741000E21AC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5CE81BD4286DA741000E21AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5CE81BD7286DA741000E21AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5CE81BDB286DA741000E21AC /* Pokee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CE81BE1286DA741000E21AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		5CE81BE7286DA742000E21AC /* Pokee Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Pokee Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CE81BEC286DA742000E21AC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		5CE81BEE286DA742000E21AC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		5CE81BF0286DA742000E21AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CE81BF5286DA742000E21AC /* Pokee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CE81BF7286DA742000E21AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5CE81BF9286DA742000E21AC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5CE81BFC286DA742000E21AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5CE81BFF286DA742000E21AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5CE81C05286DA742000E21AC /* Pokee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CE81C07286DA742000E21AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5CE81C09286DA742000E21AC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5CE81C0C286DA742000E21AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5CE81C0E286DA742000E21AC /* Pokee_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pokee_macOS.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CE81BC9286DA741000E21AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE81BE4286DA742000E21AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE81BF2286DA742000E21AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE81C02286DA742000E21AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CE81BBE286DA73E000E21AC = {
+			isa = PBXGroup;
+			children = (
+				5CE81BC3286DA73E000E21AC /* Pokee Shared */,
+				5CE81BCE286DA741000E21AC /* Pokee iOS */,
+				5CE81BDF286DA741000E21AC /* Pokee watchOS App */,
+				5CE81BEB286DA742000E21AC /* Pokee watchOS App Extension */,
+				5CE81BF6286DA742000E21AC /* Pokee tvOS */,
+				5CE81C06286DA742000E21AC /* Pokee macOS */,
+				5CE81BCD286DA741000E21AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CE81BC3286DA73E000E21AC /* Pokee Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5CE81BC4286DA73E000E21AC /* Actions.sks */,
+				5CE81BC5286DA73E000E21AC /* GameScene.sks */,
+				5CE81BC6286DA73E000E21AC /* GameScene.swift */,
+				5CE81BC7286DA741000E21AC /* Assets.xcassets */,
+			);
+			path = "Pokee Shared";
+			sourceTree = "<group>";
+		};
+		5CE81BCD286DA741000E21AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CE81BCC286DA741000E21AC /* Pokee.app */,
+				5CE81BDB286DA741000E21AC /* Pokee.app */,
+				5CE81BE7286DA742000E21AC /* Pokee Extension.appex */,
+				5CE81BF5286DA742000E21AC /* Pokee.app */,
+				5CE81C05286DA742000E21AC /* Pokee.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CE81BCE286DA741000E21AC /* Pokee iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5CE81BCF286DA741000E21AC /* AppDelegate.swift */,
+				5CE81BD1286DA741000E21AC /* GameViewController.swift */,
+				5CE81BD3286DA741000E21AC /* Main.storyboard */,
+				5CE81BD6286DA741000E21AC /* LaunchScreen.storyboard */,
+			);
+			path = "Pokee iOS";
+			sourceTree = "<group>";
+		};
+		5CE81BDF286DA741000E21AC /* Pokee watchOS App */ = {
+			isa = PBXGroup;
+			children = (
+				5CE81BE0286DA741000E21AC /* Interface.storyboard */,
+			);
+			path = "Pokee watchOS App";
+			sourceTree = "<group>";
+		};
+		5CE81BEB286DA742000E21AC /* Pokee watchOS App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5CE81BEC286DA742000E21AC /* InterfaceController.swift */,
+				5CE81BEE286DA742000E21AC /* ExtensionDelegate.swift */,
+				5CE81BF0286DA742000E21AC /* Info.plist */,
+			);
+			path = "Pokee watchOS App Extension";
+			sourceTree = "<group>";
+		};
+		5CE81BF6286DA742000E21AC /* Pokee tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				5CE81BF7286DA742000E21AC /* AppDelegate.swift */,
+				5CE81BF9286DA742000E21AC /* GameViewController.swift */,
+				5CE81BFB286DA742000E21AC /* Main.storyboard */,
+				5CE81BFE286DA742000E21AC /* LaunchScreen.storyboard */,
+			);
+			path = "Pokee tvOS";
+			sourceTree = "<group>";
+		};
+		5CE81C06286DA742000E21AC /* Pokee macOS */ = {
+			isa = PBXGroup;
+			children = (
+				5CE81C07286DA742000E21AC /* AppDelegate.swift */,
+				5CE81C09286DA742000E21AC /* GameViewController.swift */,
+				5CE81C0B286DA742000E21AC /* Main.storyboard */,
+				5CE81C0E286DA742000E21AC /* Pokee_macOS.entitlements */,
+			);
+			path = "Pokee macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CE81BCB286DA741000E21AC /* Pokee iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CE81C28286DA742000E21AC /* Build configuration list for PBXNativeTarget "Pokee iOS" */;
+			buildPhases = (
+				5CE81BC8286DA741000E21AC /* Sources */,
+				5CE81BC9286DA741000E21AC /* Frameworks */,
+				5CE81BCA286DA741000E21AC /* Resources */,
+				5CE81C27286DA742000E21AC /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CE81BDE286DA741000E21AC /* PBXTargetDependency */,
+			);
+			name = "Pokee iOS";
+			productName = "Pokee iOS";
+			productReference = 5CE81BCC286DA741000E21AC /* Pokee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5CE81BDA286DA741000E21AC /* Pokee watchOS App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CE81C24286DA742000E21AC /* Build configuration list for PBXNativeTarget "Pokee watchOS App" */;
+			buildPhases = (
+				5CE81BD9286DA741000E21AC /* Resources */,
+				5CE81C23286DA742000E21AC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CE81BEA286DA742000E21AC /* PBXTargetDependency */,
+			);
+			name = "Pokee watchOS App";
+			productName = "Pokee watchOS App";
+			productReference = 5CE81BDB286DA741000E21AC /* Pokee.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		5CE81BE6286DA742000E21AC /* Pokee watchOS App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CE81C20286DA742000E21AC /* Build configuration list for PBXNativeTarget "Pokee watchOS App Extension" */;
+			buildPhases = (
+				5CE81BE3286DA742000E21AC /* Sources */,
+				5CE81BE4286DA742000E21AC /* Frameworks */,
+				5CE81BE5286DA742000E21AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pokee watchOS App Extension";
+			productName = "Pokee watchOS App Extension";
+			productReference = 5CE81BE7286DA742000E21AC /* Pokee Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		5CE81BF4286DA742000E21AC /* Pokee tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CE81C2B286DA742000E21AC /* Build configuration list for PBXNativeTarget "Pokee tvOS" */;
+			buildPhases = (
+				5CE81BF1286DA742000E21AC /* Sources */,
+				5CE81BF2286DA742000E21AC /* Frameworks */,
+				5CE81BF3286DA742000E21AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pokee tvOS";
+			productName = "Pokee tvOS";
+			productReference = 5CE81BF5286DA742000E21AC /* Pokee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5CE81C04286DA742000E21AC /* Pokee macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CE81C2E286DA742000E21AC /* Build configuration list for PBXNativeTarget "Pokee macOS" */;
+			buildPhases = (
+				5CE81C01286DA742000E21AC /* Sources */,
+				5CE81C02286DA742000E21AC /* Frameworks */,
+				5CE81C03286DA742000E21AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pokee macOS";
+			productName = "Pokee macOS";
+			productReference = 5CE81C05286DA742000E21AC /* Pokee.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CE81BBF286DA73E000E21AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					5CE81BCB286DA741000E21AC = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					5CE81BDA286DA741000E21AC = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					5CE81BE6286DA742000E21AC = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					5CE81BF4286DA742000E21AC = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					5CE81C04286DA742000E21AC = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 5CE81BC2286DA73E000E21AC /* Build configuration list for PBXProject "Pokee" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5CE81BBE286DA73E000E21AC;
+			productRefGroup = 5CE81BCD286DA741000E21AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CE81BCB286DA741000E21AC /* Pokee iOS */,
+				5CE81BDA286DA741000E21AC /* Pokee watchOS App */,
+				5CE81BE6286DA742000E21AC /* Pokee watchOS App Extension */,
+				5CE81BF4286DA742000E21AC /* Pokee tvOS */,
+				5CE81C04286DA742000E21AC /* Pokee macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CE81BCA286DA741000E21AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE81C12286DA742000E21AC /* GameScene.sks in Resources */,
+				5CE81BD5286DA741000E21AC /* Main.storyboard in Resources */,
+				5CE81C0F286DA742000E21AC /* Actions.sks in Resources */,
+				5CE81BD8286DA741000E21AC /* LaunchScreen.storyboard in Resources */,
+				5CE81C1A286DA742000E21AC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE81BD9286DA741000E21AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE81C1B286DA742000E21AC /* Assets.xcassets in Resources */,
+				5CE81BE2286DA741000E21AC /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE81BE5286DA742000E21AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE81C13286DA742000E21AC /* GameScene.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE81BF3286DA742000E21AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE81C14286DA742000E21AC /* GameScene.sks in Resources */,
+				5CE81BFD286DA742000E21AC /* Main.storyboard in Resources */,
+				5CE81C10286DA742000E21AC /* Actions.sks in Resources */,
+				5CE81C00286DA742000E21AC /* LaunchScreen.storyboard in Resources */,
+				5CE81C1C286DA742000E21AC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE81C03286DA742000E21AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE81C0D286DA742000E21AC /* Main.storyboard in Resources */,
+				5CE81C15286DA742000E21AC /* GameScene.sks in Resources */,
+				5CE81C1D286DA742000E21AC /* Assets.xcassets in Resources */,
+				5CE81C11286DA742000E21AC /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CE81BC8286DA741000E21AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE81C16286DA742000E21AC /* GameScene.swift in Sources */,
+				5CE81BD2286DA741000E21AC /* GameViewController.swift in Sources */,
+				5CE81BD0286DA741000E21AC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE81BE3286DA742000E21AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE81C17286DA742000E21AC /* GameScene.swift in Sources */,
+				5CE81BEF286DA742000E21AC /* ExtensionDelegate.swift in Sources */,
+				5CE81BED286DA742000E21AC /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE81BF1286DA742000E21AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE81C18286DA742000E21AC /* GameScene.swift in Sources */,
+				5CE81BFA286DA742000E21AC /* GameViewController.swift in Sources */,
+				5CE81BF8286DA742000E21AC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE81C01286DA742000E21AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE81C19286DA742000E21AC /* GameScene.swift in Sources */,
+				5CE81C0A286DA742000E21AC /* GameViewController.swift in Sources */,
+				5CE81C08286DA742000E21AC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5CE81BDE286DA741000E21AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CE81BDA286DA741000E21AC /* Pokee watchOS App */;
+			targetProxy = 5CE81BDD286DA741000E21AC /* PBXContainerItemProxy */;
+		};
+		5CE81BEA286DA742000E21AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CE81BE6286DA742000E21AC /* Pokee watchOS App Extension */;
+			targetProxy = 5CE81BE9286DA742000E21AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5CE81BD3286DA741000E21AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CE81BD4286DA741000E21AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5CE81BD6286DA741000E21AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CE81BD7286DA741000E21AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5CE81BE0286DA741000E21AC /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CE81BE1286DA741000E21AC /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		5CE81BFB286DA742000E21AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CE81BFC286DA742000E21AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5CE81BFE286DA742000E21AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CE81BFF286DA742000E21AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5CE81C0B286DA742000E21AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CE81C0C286DA742000E21AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5CE81C1E286DA742000E21AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5CE81C1F286DA742000E21AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		5CE81C21286DA742000E21AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4995Y42837;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pokee watchOS App Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Pokee watchOS App Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ancill.Pokee.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "Pokee Extension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		5CE81C22286DA742000E21AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4995Y42837;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pokee watchOS App Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Pokee watchOS App Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ancill.Pokee.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "Pokee Extension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		5CE81C25286DA742000E21AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4995Y42837;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = Pokee_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = Pokee;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ancill.Pokee;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ancill.Pokee.watchkitapp;
+				PRODUCT_NAME = Pokee;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		5CE81C26286DA742000E21AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4995Y42837;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = Pokee_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = Pokee;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ancill.Pokee;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ancill.Pokee.watchkitapp;
+				PRODUCT_NAME = Pokee;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		5CE81C29286DA742000E21AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4995Y42837;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ancill.Pokee;
+				PRODUCT_NAME = Pokee;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5CE81C2A286DA742000E21AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4995Y42837;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ancill.Pokee;
+				PRODUCT_NAME = Pokee;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CE81C2C286DA742000E21AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4995Y42837;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ancill.Pokee;
+				PRODUCT_NAME = Pokee;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+			};
+			name = Debug;
+		};
+		5CE81C2D286DA742000E21AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4995Y42837;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ancill.Pokee;
+				PRODUCT_NAME = Pokee;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CE81C2F286DA742000E21AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pokee macOS/Pokee_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4995Y42837;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ancill.Pokee;
+				PRODUCT_NAME = Pokee;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5CE81C30286DA742000E21AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pokee macOS/Pokee_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4995Y42837;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ancill.Pokee;
+				PRODUCT_NAME = Pokee;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CE81BC2286DA73E000E21AC /* Build configuration list for PBXProject "Pokee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE81C1E286DA742000E21AC /* Debug */,
+				5CE81C1F286DA742000E21AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CE81C20286DA742000E21AC /* Build configuration list for PBXNativeTarget "Pokee watchOS App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE81C21286DA742000E21AC /* Debug */,
+				5CE81C22286DA742000E21AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CE81C24286DA742000E21AC /* Build configuration list for PBXNativeTarget "Pokee watchOS App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE81C25286DA742000E21AC /* Debug */,
+				5CE81C26286DA742000E21AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CE81C28286DA742000E21AC /* Build configuration list for PBXNativeTarget "Pokee iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE81C29286DA742000E21AC /* Debug */,
+				5CE81C2A286DA742000E21AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CE81C2B286DA742000E21AC /* Build configuration list for PBXNativeTarget "Pokee tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE81C2C286DA742000E21AC /* Debug */,
+				5CE81C2D286DA742000E21AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CE81C2E286DA742000E21AC /* Build configuration list for PBXNativeTarget "Pokee macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE81C2F286DA742000E21AC /* Debug */,
+				5CE81C30286DA742000E21AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CE81BBF286DA73E000E21AC /* Project object */;
+}
