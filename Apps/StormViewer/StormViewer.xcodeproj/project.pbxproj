@@ -23,6 +23,7 @@
 		5CB0D22A287056DD00D6D871 /* nssl0046.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D220287056DD00D6D871 /* nssl0046.jpg */; };
 		5CB0D22B287056DD00D6D871 /* nssl0042.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D221287056DD00D6D871 /* nssl0042.jpg */; };
 		5CB0D22C287056DD00D6D871 /* nssl0051.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D222287056DD00D6D871 /* nssl0051.jpg */; };
+		5CB0D22E2870C0B800D6D871 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D22D2870C0B800D6D871 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		5CB0D220287056DD00D6D871 /* nssl0046.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nssl0046.jpg; path = "../../../../../../../Downloads/HackingWithSwift-main/Classic/project1/Project1/nssl0046.jpg"; sourceTree = "<group>"; };
 		5CB0D221287056DD00D6D871 /* nssl0042.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nssl0042.jpg; path = "../../../../../../../Downloads/HackingWithSwift-main/Classic/project1/Project1/nssl0042.jpg"; sourceTree = "<group>"; };
 		5CB0D222287056DD00D6D871 /* nssl0051.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nssl0051.jpg; path = "../../../../../../../Downloads/HackingWithSwift-main/Classic/project1/Project1/nssl0051.jpg"; sourceTree = "<group>"; };
+		5CB0D22D2870C0B800D6D871 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				5CB0D20D28704E1D00D6D871 /* Assets.xcassets */,
 				5CB0D20F28704E1D00D6D871 /* LaunchScreen.storyboard */,
 				5CB0D21228704E1D00D6D871 /* Info.plist */,
+				5CB0D22D2870C0B800D6D871 /* DetailViewController.swift */,
 			);
 			path = StormViewer;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				5CB0D20928704E1C00D6D871 /* ViewController.swift in Sources */,
 				5CB0D20528704E1C00D6D871 /* AppDelegate.swift in Sources */,
 				5CB0D20728704E1C00D6D871 /* SceneDelegate.swift in Sources */,
+				5CB0D22E2870C0B800D6D871 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
