@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CA6D76728738BFC0035390E /* TaskListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA6D76628738BFC0035390E /* TaskListController.swift */; };
 		5CB0D23C2870D6B600D6D871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D23B2870D6B600D6D871 /* AppDelegate.swift */; };
 		5CB0D23E2870D6B600D6D871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D23D2870D6B600D6D871 /* SceneDelegate.swift */; };
 		5CB0D2402870D6B600D6D871 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D23F2870D6B600D6D871 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CA6D76628738BFC0035390E /* TaskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListController.swift; sourceTree = "<group>"; };
 		5CB0D2382870D6B600D6D871 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB0D23B2870D6B600D6D871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CB0D23D2870D6B600D6D871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				5CB0D2442870D6B800D6D871 /* Assets.xcassets */,
 				5CB0D2462870D6B800D6D871 /* LaunchScreen.storyboard */,
 				5CB0D2492870D6B800D6D871 /* Info.plist */,
+				5CA6D76628738BFC0035390E /* TaskListController.swift */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				5CB0D2402870D6B600D6D871 /* ViewController.swift in Sources */,
 				5CB0D23C2870D6B600D6D871 /* AppDelegate.swift in Sources */,
+				5CA6D76728738BFC0035390E /* TaskListController.swift in Sources */,
 				5CB0D23E2870D6B600D6D871 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
