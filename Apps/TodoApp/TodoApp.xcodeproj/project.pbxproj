@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2C34382874E29E00757D72 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C34372874E29E00757D72 /* Task.swift */; };
+		5C2C343A2874E3B200757D72 /* TasksStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C34392874E3B200757D72 /* TasksStorage.swift */; };
 		5CA6D76728738BFC0035390E /* TaskListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA6D76628738BFC0035390E /* TaskListController.swift */; };
 		5CB0D23C2870D6B600D6D871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D23B2870D6B600D6D871 /* AppDelegate.swift */; };
 		5CB0D23E2870D6B600D6D871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D23D2870D6B600D6D871 /* SceneDelegate.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C2C34372874E29E00757D72 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		5C2C34392874E3B200757D72 /* TasksStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksStorage.swift; sourceTree = "<group>"; };
 		5CA6D76628738BFC0035390E /* TaskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListController.swift; sourceTree = "<group>"; };
 		5CB0D2382870D6B600D6D871 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB0D23B2870D6B600D6D871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C2C34362874E28C00757D72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C34372874E29E00757D72 /* Task.swift */,
+				5C2C34392874E3B200757D72 /* TasksStorage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5CB0D22F2870D6B600D6D871 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +71,7 @@
 		5CB0D23A2870D6B600D6D871 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				5C2C34362874E28C00757D72 /* Model */,
 				5CB0D23B2870D6B600D6D871 /* AppDelegate.swift */,
 				5CB0D23D2870D6B600D6D871 /* SceneDelegate.swift */,
 				5CB0D23F2870D6B600D6D871 /* ViewController.swift */,
@@ -143,6 +157,8 @@
 			files = (
 				5CB0D2402870D6B600D6D871 /* ViewController.swift in Sources */,
 				5CB0D23C2870D6B600D6D871 /* AppDelegate.swift in Sources */,
+				5C2C343A2874E3B200757D72 /* TasksStorage.swift in Sources */,
+				5C2C34382874E29E00757D72 /* Task.swift in Sources */,
 				5CA6D76728738BFC0035390E /* TaskListController.swift in Sources */,
 				5CB0D23E2870D6B600D6D871 /* SceneDelegate.swift in Sources */,
 			);
