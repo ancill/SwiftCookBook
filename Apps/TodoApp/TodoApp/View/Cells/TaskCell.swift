@@ -7,22 +7,27 @@
 
 import UIKit
 
-class TaskCell: UITableViewController {
+class TaskCell: UITableViewCell {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet var symbol: UILabel!
+    @IBOutlet var title: UILabel!
+    
+    // хранилище задач
+    var tasksStorage: TasksStorageProtocol = TasksStorage() // коллекция задач
+    var tasks: [TaskPriority:[TaskProtocol]] = [:]
+    // порядок отображения секций по типам
+    // индекс в массиве соответствует индексу секции в таблице
+    var sectionsTypesPosition: [TaskPriority] = [.important, .normal]
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-
 
 }
