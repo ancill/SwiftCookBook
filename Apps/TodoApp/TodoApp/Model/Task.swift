@@ -3,7 +3,7 @@ enum TaskPriority {
     case important
 }
 
-enum TaskStatus {
+enum TaskStatus: Int {
     case planned
     case completed
 }
@@ -21,4 +21,3 @@ struct Task: TaskProtocol {
 
     var status: TaskStatus
 }
-

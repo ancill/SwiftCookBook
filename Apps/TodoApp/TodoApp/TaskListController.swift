@@ -10,10 +10,24 @@ import UIKit
 class TaskListController: UITableViewController {
     // хранилище задач
     var tasksStorage: TasksStorageProtocol = TasksStorage() // коллекция задач
-    var tasks: [TaskPriority: [TaskProtocol]] = [:]
+    var tasks: [TaskPriority: [TaskProtocol]] = [:] {
+        didSet {
+            // сортировка списка задач
+            for (tasksGroupPriority, tasksGroup) in tasks {
+                tasks[tasksGroupPriority] = tasksGroup.sorted { task1, task2 in
+                    let task1position = tasksStatusPosition.firstIndex(of: task1.status) ?? 0
+                    let task2position = tasksStatusPosition.firstIndex(of: task2.status) ?? 0
+                    return task1position < task2position
+                }
+            }
+        }
+    }
+
     // порядок отображения секций по типам
     // индекс в массиве соответствует индексу секции в таблице
     var sectionsTypesPosition: [TaskPriority] = [.important, .normal]
+    // порядок отображения задач по их статусу
+    var tasksStatusPosition: [TaskStatus] = [.planned, .completed]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +48,22 @@ class TaskListController: UITableViewController {
 
     // возвращает количество секций в таблице;
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return tasks.count
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        var title: String?
+        let tasksType = sectionsTypesPosition[section]
+        if tasksType == .important {
+            title = "Важные"
+        } else if tasksType == .normal {
+            title = "Текущие"
+        }
+        return title
     }
 
     //  возвращает количество строк в определенной секции таблицы;
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         // определяем приоритет задач, соответствующий текущей секции
         let taskType = sectionsTypesPosition[section]
         guard let currentTasksType = tasks[taskType] else {
@@ -51,7 +74,50 @@ class TaskListController: UITableViewController {
 
     // ячейка для строки таблицы
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return getConfiguredTaskCell_constraints(for: indexPath)
+        // ячейка на основе констрейнтов
+        // return getConfiguredTaskCell_constraints(for: indexPath)
+
+        // ячейка на основе стека
+        return getConfiguredTaskCell_stack(for: indexPath)
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // check for task
+        let taskType = sectionsTypesPosition[indexPath.section]
+        guard let _ = tasks[taskType]?[indexPath.row] else {
+            return
+        }
+
+        // 2. Убеждаемся, что задача не является выполненной
+        guard tasks[taskType]![indexPath.row].status == .planned else {
+            // снимаем выделение со строки
+            tableView.deselectRow(at: indexPath, animated: true)
+            return
+        }
+        // 3. Отмечаем задачу как выполненную
+        tasks[taskType]![indexPath.row].status = .completed
+        // 4. Перезагружаем секцию таблицы
+        tableView.reloadSections(IndexSet(arrayLiteral: indexPath.section),
+                                 with: .automatic)
+    }
+
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        // получаем данные о задаче, которую необходимо перевести в статус "запланирована"
+        let taskType = sectionsTypesPosition[indexPath.section]
+        guard let _ = tasks[taskType]?[indexPath.row] else {
+            return nil
+        }
+        // проверяем, что задача имеет статус "выполнено"
+        guard tasks[taskType]![indexPath.row].status == .completed else {
+            return nil
+        }
+        // создаем действие для изменения статуса
+        let actionSwipeInstance = UIContextualAction(style: .normal, title: "Не выполнена") { _, _, _ in
+            self.tasks[taskType]![indexPath.row].status = .planned
+            self.tableView.reloadSections(IndexSet(arrayLiteral: indexPath.section), with: .automatic)
+        }
+        // возвращаем настроенный объект
+        return UISwipeActionsConfiguration(actions: [actionSwipeInstance])
     }
 
     // ячейка на основе ограничений
@@ -70,14 +136,40 @@ class TaskListController: UITableViewController {
         symbolLabel?.text = getSymbolForTask(with: currentTask.status) // изменяем текст в ячейке
         textLabel?.text = currentTask.title
         // изменяем цвет текста и символа
-        if currentTask.status == .planned {
-            textLabel?.textColor = .black
-            symbolLabel?.textColor = .black
-        } else {
-            textLabel?.textColor = .lightGray
-            symbolLabel?.textColor = .lightGray
-        }
+        textLabel?.textColor = getColorForTask(with: currentTask.status)
+        symbolLabel?.textColor = getColorForTask(with: currentTask.status)
+
         return cell
+    }
+
+    // ячейка на основе стека
+    private func getConfiguredTaskCell_stack(for indexPath: IndexPath) -> UITableViewCell {
+        // загружаем прототип ячейки по идентификатору
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCellStack", for: indexPath) as! TaskCell
+        // получаем данные о задаче, которые необходимо вывести в ячейке
+        let taskType = sectionsTypesPosition[indexPath.section]
+        guard let currentTask = tasks[taskType]?[indexPath.row] else {
+            return cell
+        }
+        // изменяем текст в ячейке
+        cell.title.text = currentTask.title
+        // изменяем символ в ячейке
+        cell.symbol.text = getSymbolForTask(with: currentTask.status)
+        // изменяем цвет текста
+        cell.title.textColor = getColorForTask(with: currentTask.status)
+        cell.symbol.textColor = getColorForTask(with: currentTask.status)
+
+        return cell
+    }
+
+    private func getColorForTask(with status: TaskStatus) -> UIColor {
+        var resultColor: UIColor
+        if status == .planned {
+            resultColor = .black
+        } else {
+            resultColor = .lightGray
+        }
+        return resultColor
     }
 
     // возвращаем символ для соответствующего типа задачи
