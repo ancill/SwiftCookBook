@@ -25,6 +25,8 @@ class GameViewController: UIViewController {
             view.showsPhysics = false
             view.showsFPS = true
             view.showsNodeCount = true
+            // enable it for perfomance/keep in mind that all nodes must have a zPosition
+            view.ignoresSiblingOrder = false
         }
     }
 

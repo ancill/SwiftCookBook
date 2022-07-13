@@ -32,6 +32,8 @@ class TaskListController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTasks()
+        // кнопка активации режима редактирования
+        navigationItem.leftBarButtonItem = editButtonItem
     }
 
     private func loadTasks() {
@@ -118,6 +120,11 @@ class TaskListController: UITableViewController {
         }
         // возвращаем настроенный объект
         return UISwipeActionsConfiguration(actions: [actionSwipeInstance])
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        // удаляем строку, соответствующую задаче
+        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 
     // ячейка на основе ограничений
