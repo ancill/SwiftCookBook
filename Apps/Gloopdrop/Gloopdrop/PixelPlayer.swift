@@ -11,14 +11,14 @@ class PlayerPixel: SKSpriteNode {
 
     init() {
         // Set default texture
-        let texture = SKTexture(imageNamed: "blob-walk_0")
+        let texture = SKTexture(imageNamed: "Image-0")
         // Call to super.init
         super.init(texture: texture, color: .clear, size: texture.size())
         // Set up animation textures
-        self.walkTextures = self.loadTextures(atlas: "player", prefix: "blob-walk_", startsAt: 0, stopsAt: 2)
+        self.walkTextures = self.loadTextures(atlas: "pixelPlayer", prefix: "Image-", startsAt: 0, stopsAt: 3, isPixel: true)
         // Set up other properties after init
-        self.name = "player"
-        self.setScale(1.0)
+        self.name = "pixel"
+        self.setScale(2.0)
         self.anchorPoint = CGPoint(x: 0.5, y: 0.0) // center-bottom
         self.zPosition = Layer.player.rawValue
     }

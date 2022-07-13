@@ -7,26 +7,25 @@ enum Layer: CGFloat {
     case player
 }
 
-
-
 // MARK: - SPRITEKIT EXTENSIONS
 
 extension SKSpriteNode {
     // Used to load texture arrays for animations
     func loadTextures(atlas: String, prefix: String,
-                      startsAt: Int, stopsAt: Int) -> [SKTexture]
+                      startsAt: Int, stopsAt: Int, isPixel: Bool = false) -> [SKTexture]
     {
+        let filteringMode: SKTextureFilteringMode = isPixel ? .nearest : .linear
         var textureArray = [SKTexture]()
         let textureAtlas = SKTextureAtlas(named: atlas)
         for i in startsAt ... stopsAt {
             let textureName = "\(prefix)\(i)"
             let temp = textureAtlas.textureNamed(textureName)
+            temp.filteringMode = filteringMode
             textureArray.append(temp)
         }
         return textureArray
     }
-    
-    
+
     // Start the animation using a name and a count (0 = repeat forever)
     func startAnimation(textures: [SKTexture], speed: Double, name: String, count: Int, resize: Bool, restore: Bool) {
         // Run animation only if animation key doesn't already exist

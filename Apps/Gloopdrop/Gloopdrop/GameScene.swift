@@ -1,7 +1,7 @@
 import GameplayKit
 import SpriteKit
 class GameScene: SKScene {
-    let player = Player()
+    let player = PlayerPixel()
     let playerSpeed: CGFloat = 1.5
 
     override func didMove(to view: SKView) {
