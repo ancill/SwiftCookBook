@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C020C22287F70B9009DF284 /* TaskEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C020C21287F70B9009DF284 /* TaskEditController.swift */; };
 		5C2C34382874E29E00757D72 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C34372874E29E00757D72 /* Task.swift */; };
 		5C2C343A2874E3B200757D72 /* TasksStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C34392874E3B200757D72 /* TasksStorage.swift */; };
 		5CA6D76728738BFC0035390E /* TaskListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA6D76628738BFC0035390E /* TaskListController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C020C21287F70B9009DF284 /* TaskEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditController.swift; sourceTree = "<group>"; };
 		5C2C34372874E29E00757D72 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		5C2C34392874E3B200757D72 /* TasksStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksStorage.swift; sourceTree = "<group>"; };
 		5CA6D76628738BFC0035390E /* TaskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				5CB0D2462870D6B800D6D871 /* LaunchScreen.storyboard */,
 				5CB0D2492870D6B800D6D871 /* Info.plist */,
 				5CA6D76628738BFC0035390E /* TaskListController.swift */,
+				5C020C21287F70B9009DF284 /* TaskEditController.swift */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C020C22287F70B9009DF284 /* TaskEditController.swift in Sources */,
 				5CB0D2402870D6B600D6D871 /* ViewController.swift in Sources */,
 				5CAD6438287CBD9D006EBF74 /* TaskCell.swift in Sources */,
 				5CB0D23C2870D6B600D6D871 /* AppDelegate.swift in Sources */,
