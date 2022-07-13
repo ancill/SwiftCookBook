@@ -1,12 +1,7 @@
 import Foundation
 import SpriteKit
 
-// This enum lets you easily switch between animations
-enum PlayerAnimationType: String {
-    case walk
-}
-
-class Player: SKSpriteNode {
+class PlayerPixel: SKSpriteNode {
     // MARK: - PROPERTIES
 
     // Textures (Animation)
