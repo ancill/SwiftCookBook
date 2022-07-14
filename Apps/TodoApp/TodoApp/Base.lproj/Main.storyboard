@@ -170,6 +170,9 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="WZ6-vJ-jOB" secondAttribute="bottom" id="uCx-nZ-iKL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="lFP-V6-eGK" kind="show" id="mfF-Kt-GSl"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8ca-W0-0Dg">
                                         <rect key="frame" x="0.0" y="105.5" width="414" height="43.5"/>
@@ -196,6 +199,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfx-nv-eA4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2671" y="58"/>
+        </scene>
+        <!--Task Type Controller-->
+        <scene sceneID="p5K-74-3Ru">
+            <objects>
+                <tableViewController id="lFP-V6-eGK" customClass="TaskTypeController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="eV6-83-fr9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="lFP-V6-eGK" id="O1C-Ex-QEr"/>
+                            <outlet property="delegate" destination="lFP-V6-eGK" id="HXg-z6-DIS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="3hK-Id-HHC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jow-Y8-zLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3512" y="58"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gl4-ap-dL9">
