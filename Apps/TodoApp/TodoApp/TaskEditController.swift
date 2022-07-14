@@ -9,12 +9,12 @@ class TaskEditController: UITableViewController {
         .important: "Важная",
         .normal: "Текущая",
     ]
-    
+
     // параметры задачи
     var taskText: String = ""
     var taskType: TaskPriority = .normal
     var taskStatus: TaskStatus = .planned
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // обновление текстового поля с названием задачи
@@ -33,4 +33,18 @@ class TaskEditController: UITableViewController {
     }
 
     var doAfterEdit: ((String, TaskPriority, TaskStatus) -> Void)?
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { if segue.identifier == "toTaskTypeScreen" {
+        // ссылка на контроллер назначения
+        let destination = segue.destination as! TaskTypeController
+        // передача выбранного типа
+        destination.selectedType = taskType
+        // передача обработчика выбора типа
+        destination.doAfterTypeSelected = { [unwoned self] selectedType in
+            taskType = selectedType
+            // обновляем метку с текущим типом
+            taskTypeLabel?.text = taskTitles[taskType]
+        }
+    }
+    }
 }
