@@ -11,7 +11,7 @@ class TaskTypeController: UITableViewController {
     // 3. выбранный приоритет
     var selectedType: TaskPriority = .normal
 
-    // Замыкание doAfterTypeSelected принимает значение типа TaskPriority, указывающее на выбранный тип. 
+    // Замыкание doAfterTypeSelected принимает значение типа TaskPriority, указывающее на выбранный тип.
     var doAfterTypeSelected: ((TaskPriority) -> Void)?
 
     override func numberOfSections(in tableView: UITableView) -> Int {

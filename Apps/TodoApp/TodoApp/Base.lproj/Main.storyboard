@@ -98,7 +98,7 @@
                     <navigationItem key="navigationItem" id="gZ3-Y5-mzw">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="evQ-Sf-csa">
                             <connections>
-                                <segue destination="6Fn-ES-Jjk" kind="show" id="vkp-4e-fNX"/>
+                                <segue destination="6Fn-ES-Jjk" kind="show" identifier="toCreateScreen" id="vkp-4e-fNX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -140,20 +140,20 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Hw8-NW-VMK">
-                                        <rect key="frame" x="0.0" y="62.5" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="62.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hw8-NW-VMK" id="p5w-3m-Chq">
-                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Task type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRJ-b1-GNz">
-                                                    <rect key="frame" x="20" y="11" width="73" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="73" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZ6-vJ-jOB">
-                                                    <rect key="frame" x="93" y="11" width="284.5" height="21"/>
+                                                    <rect key="frame" x="93" y="11" width="284.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                     <nil key="highlightedColor"/>
@@ -175,11 +175,30 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8ca-W0-0Dg">
-                                        <rect key="frame" x="0.0" y="105.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="106" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8ca-W0-0Dg" id="QAq-By-2E0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already 👍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usj-On-2rt">
+                                                    <rect key="frame" x="20" y="11" width="325" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rdx-ud-OCf">
+                                                    <rect key="frame" x="345" y="6" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Usj-On-2rt" secondAttribute="bottom" id="1yi-E5-6he"/>
+                                                <constraint firstItem="rdx-ud-OCf" firstAttribute="leading" secondItem="Usj-On-2rt" secondAttribute="trailing" id="DOm-LD-wT6"/>
+                                                <constraint firstItem="Usj-On-2rt" firstAttribute="leading" secondItem="QAq-By-2E0" secondAttribute="leadingMargin" id="RqC-Yb-wXE"/>
+                                                <constraint firstItem="Usj-On-2rt" firstAttribute="top" secondItem="QAq-By-2E0" secondAttribute="topMargin" id="bKN-1s-T8X"/>
+                                                <constraint firstItem="rdx-ud-OCf" firstAttribute="centerY" secondItem="QAq-By-2E0" secondAttribute="centerY" id="gfS-0F-Sd0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rdx-ud-OCf" secondAttribute="trailing" id="iqy-JA-IXI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -190,8 +209,15 @@
                             <outlet property="delegate" destination="6Fn-ES-Jjk" id="tY3-pB-wnQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="anN-I8-GOg"/>
+                    <navigationItem key="navigationItem" id="anN-I8-GOg">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Edy-wD-vz6">
+                            <connections>
+                                <action selector="saveTask:" destination="6Fn-ES-Jjk" id="gr9-ob-AVC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="taskStatusSwitch" destination="rdx-ud-OCf" id="CV3-u3-IFd"/>
                         <outlet property="taskTitle" destination="Hfn-V8-rOV" id="Imf-as-js1"/>
                         <outlet property="taskTypeLabel" destination="fRJ-b1-GNz" id="fQR-b5-naI"/>
                     </connections>
