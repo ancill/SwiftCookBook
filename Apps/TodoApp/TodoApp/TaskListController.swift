@@ -56,9 +56,9 @@ class TaskListController: UITableViewController {
         var title: String?
         let tasksType = sectionsTypesPosition[section]
         if tasksType == .important {
-            title = "Важные"
+            title = NSLocalizedString("important", comment: "")
         } else if tasksType == .normal {
-            title = "Текущие"
+            title = NSLocalizedString("normal", comment: "")
         }
         return title
     }

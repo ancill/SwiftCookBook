@@ -11,8 +11,8 @@ class TaskEditController: UITableViewController {
 
     // Название типов задач
     private var taskTitles: [TaskPriority: String] = [
-        .important: "Важная",
-        .normal: "Текущая",
+        .important: NSLocalizedString("important", comment: ""),
+        .normal: NSLocalizedString("normal", comment: ""),
     ]
 
     // параметры задачи

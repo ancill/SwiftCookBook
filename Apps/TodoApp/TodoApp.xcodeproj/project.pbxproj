@@ -13,6 +13,7 @@
 		5C76852528804F250093500A /* TaskTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C76852428804F250093500A /* TaskTypeController.swift */; };
 		5C7685282880514D0093500A /* TaskTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7685262880514D0093500A /* TaskTypeCell.swift */; };
 		5C7685292880514D0093500A /* TaskTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7685272880514D0093500A /* TaskTypeCell.xib */; };
+		5C874A602881E8CB00362CD7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C874A5F2881E8CB00362CD7 /* Localizable.strings */; };
 		5CA6D76728738BFC0035390E /* TaskListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA6D76628738BFC0035390E /* TaskListController.swift */; };
 		5CAD6438287CBD9D006EBF74 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAD6437287CBD9D006EBF74 /* TaskCell.swift */; };
 		5CB0D23C2870D6B600D6D871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D23B2870D6B600D6D871 /* AppDelegate.swift */; };
@@ -30,6 +31,8 @@
 		5C76852428804F250093500A /* TaskTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTypeController.swift; sourceTree = "<group>"; };
 		5C7685262880514D0093500A /* TaskTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTypeCell.swift; sourceTree = "<group>"; };
 		5C7685272880514D0093500A /* TaskTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTypeCell.xib; sourceTree = "<group>"; };
+		5C874A5E2881E88500362CD7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		5C874A5F2881E8CB00362CD7 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		5CA6D76628738BFC0035390E /* TaskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListController.swift; sourceTree = "<group>"; };
 		5CAD6437287CBD9D006EBF74 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		5CB0D2382870D6B600D6D871 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +84,7 @@
 		5CB0D22F2870D6B600D6D871 = {
 			isa = PBXGroup;
 			children = (
+				5C874A5F2881E8CB00362CD7 /* Localizable.strings */,
 				5CB0D23A2870D6B600D6D871 /* TodoApp */,
 				5CB0D2392870D6B600D6D871 /* Products */,
 			);
@@ -157,6 +161,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 5CB0D22F2870D6B600D6D871;
 			productRefGroup = 5CB0D2392870D6B600D6D871 /* Products */;
@@ -173,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C874A602881E8CB00362CD7 /* Localizable.strings in Resources */,
 				5CB0D2482870D6B800D6D871 /* LaunchScreen.storyboard in Resources */,
 				5CB0D2452870D6B800D6D871 /* Assets.xcassets in Resources */,
 				5C7685292880514D0093500A /* TaskTypeCell.xib in Resources */,
@@ -207,6 +213,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5CB0D2422870D6B600D6D871 /* Base */,
+				5C874A5E2881E88500362CD7 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -226,6 +233,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -286,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BcR-F6-XWb"; */
+"BcR-F6-XWb.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "Edy-wD-vz6"; */
+"Edy-wD-vz6.title" = "Save";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ge9-EQ-vFj"; */
+"Ge9-EQ-vFj.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Enter a task"; ObjectID = "Hfn-V8-rOV"; */
+"Hfn-V8-rOV.placeholder" = "Enter a task";
+
+/* Class = "UILabel"; text = "Already 👍"; ObjectID = "Usj-On-2rt"; */
+"Usj-On-2rt.text" = "Already 👍";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WZ6-vJ-jOB"; */
+"WZ6-vJ-jOB.text" = "Label";
+
+/* Class = "UILabel"; text = "Task type"; ObjectID = "fRJ-b1-GNz"; */
+"fRJ-b1-GNz.text" = "Task type";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kaf-Hy-LB0"; */
+"kaf-Hy-LB0.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "knp-1k-wVg"; */
+"knp-1k-wVg.text" = "Label";
