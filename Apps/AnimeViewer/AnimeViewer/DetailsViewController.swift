@@ -3,13 +3,16 @@ import UIKit
 class DetailsViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     var selectedImage: String = ""
-    
+    var totalPictureCount: Int = 0
+    var numberOfPicture: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = selectedImage
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.title = "\(selectedImage) is \(numberOfPicture) of \(totalPictureCount)"
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
         imageView.image = UIImage(named: selectedImage)
     }
     

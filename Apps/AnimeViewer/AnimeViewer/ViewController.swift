@@ -8,7 +8,12 @@
 import UIKit
 
 class ViewController: UITableViewController {
-    var pictures = [String]()
+    var pictures = [String]() {
+        didSet {
+            pictures.sort { $0 > $1 }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +31,7 @@ class ViewController: UITableViewController {
         }
     }
     
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pictures.count
     }
@@ -40,11 +46,11 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Details") as? DetailsViewController {
             vc.selectedImage = pictures[indexPath.row]
+            vc.totalPictureCount = pictures.count
+            vc.numberOfPicture = indexPath.row + 1
             navigationController?.pushViewController(vc, animated: true)
         }
-        
     }
-
-
+    
+    
 }
-
