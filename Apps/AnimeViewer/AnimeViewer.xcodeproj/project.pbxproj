@@ -17,6 +17,7 @@
 		5C874A872882B7AE00362CD7 /* photo-0.webp in Resources */ = {isa = PBXBuildFile; fileRef = 5C874A832882B7AE00362CD7 /* photo-0.webp */; };
 		5C874A882882B7AE00362CD7 /* photo-1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 5C874A842882B7AE00362CD7 /* photo-1.webp */; };
 		5C874A892882B7AE00362CD7 /* photo-3.webp in Resources */ = {isa = PBXBuildFile; fileRef = 5C874A852882B7AE00362CD7 /* photo-3.webp */; };
+		5C874A8B2882CFB700362CD7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C874A8A2882CFB700362CD7 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5C874A832882B7AE00362CD7 /* photo-0.webp */ = {isa = PBXFileReference; lastKnownFileType = file; name = "photo-0.webp"; path = "AnimeViewer/photo-0.webp"; sourceTree = SOURCE_ROOT; };
 		5C874A842882B7AE00362CD7 /* photo-1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; name = "photo-1.webp"; path = "AnimeViewer/photo-1.webp"; sourceTree = SOURCE_ROOT; };
 		5C874A852882B7AE00362CD7 /* photo-3.webp */ = {isa = PBXFileReference; lastKnownFileType = file; name = "photo-3.webp"; path = "AnimeViewer/photo-3.webp"; sourceTree = SOURCE_ROOT; };
+		5C874A8A2882CFB700362CD7 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				5C874A6F2882B1C400362CD7 /* SceneDelegate.swift */,
 				5C874A712882B1C400362CD7 /* ViewController.swift */,
 				5C874A732882B1C400362CD7 /* Main.storyboard */,
+				5C874A8A2882CFB700362CD7 /* DetailsViewController.swift */,
 				5C874A762882B1C500362CD7 /* Assets.xcassets */,
 				5C874A812882B79500362CD7 /* photos */,
 				5C874A782882B1C500362CD7 /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 				5C874A722882B1C400362CD7 /* ViewController.swift in Sources */,
 				5C874A6E2882B1C400362CD7 /* AppDelegate.swift in Sources */,
 				5C874A702882B1C400362CD7 /* SceneDelegate.swift in Sources */,
+				5C874A8B2882CFB700362CD7 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
