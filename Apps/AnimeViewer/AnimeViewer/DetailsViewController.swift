@@ -8,6 +8,7 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.title = "\(selectedImage) is \(numberOfPicture) of \(totalPictureCount)"
