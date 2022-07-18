@@ -21,6 +21,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scoreLabel.text = "   Score: \(score)   "
+        scoreLabel.layer.borderWidth = 1
+        scoreLabel.layer.borderColor = UIColor.gray.cgColor
+        scoreLabel.layer.cornerRadius = 10
+        scoreLabel.textColor = .gray
+        
   
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
@@ -75,8 +82,8 @@ class ViewController: UIViewController {
             message = "Your score is \(score)"
         }
             
-        scoreLabel.text = "Score: \(score)"
-        
+        scoreLabel.text = "   Score: \(score)   "
+    
         let ac = UIAlertController(title: alertTitle, message: message, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         present(ac, animated: true)
