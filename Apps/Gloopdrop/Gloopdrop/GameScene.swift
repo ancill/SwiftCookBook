@@ -24,6 +24,22 @@ class GameScene: SKScene {
         player.setupConstraints(floor: foreground.frame.maxY)
         addChild(player)
         player.walk()
+     
+        // Set up game
+        spawnGloop()
+
+    }
+
+    // MARK: - GAME FUNCTIONS
+
+    /* ####################################################################### */
+    /*                      GAME FUNCTIONS START HERE                          */
+    /* ####################################################################### */
+    func spawnGloop() {
+        let collectible = Collectible(collectibleType: CollectibleType.gloop)
+        collectible.position = CGPoint(x: player.position.x,
+                                       y: player.position.y * 2.5)
+        addChild(collectible)
     }
 
     // MARK: - TOUCH HANDLING

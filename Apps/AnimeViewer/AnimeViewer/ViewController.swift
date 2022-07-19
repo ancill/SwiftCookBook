@@ -29,9 +29,24 @@ class ViewController: UITableViewController {
                 pictures.append(item)
             }
         }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action:
+            #selector(shareApp))
     }
     
-    
+    @objc func shareApp() {
+  
+        guard let myWebsite = URL(string: "http://itunes.apple.com/app/idXXXXXXXXX") else {
+            print("No app found")
+            return
+        }
+                
+        let objectsToShare = ["Send my app to friends", myWebsite] as [Any]
+        let vc = UIActivityViewController(activityItems: [objectsToShare], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pictures.count
     }
@@ -51,6 +66,4 @@ class ViewController: UITableViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
-    
 }
