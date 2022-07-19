@@ -25,6 +25,7 @@ class ViewController: UITableViewController {
         
         let items = try! fm.contentsOfDirectory(atPath: path)
         for item in items {
+            print(items)
             if item.hasPrefix("photo") {
                 pictures.append(item)
             }
